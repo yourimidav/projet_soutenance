@@ -1,0 +1,21 @@
+<div *ngIf="city">
+    <h2> Weather in <span>{{ city.cityName | uppercase }}</span> {{ city.countryName }}</h2>
+    <div><span>id: </span>{{ city.id }} </div>
+    <div>
+        <label for="cityName">City name: </label>
+        <input type="text" [(ngModel)]="city.cityName" name="cityName" id="cityName">
+        <button (click)="getWeather()">Show it weather</button>
+    </div>
+    <img *ngIf="icon"
+        src="http://openweathermap.org/img/wn/{{ icon }}@4x.png"
+        alt=""
+    />
+    <div *ngIf="main">
+        <p>
+          {{ description }} avec une température de {{ main.temp }}°C pour un ressenti
+          de {{ main.feelsLike }}°C.
+        </p>
+      </div>
+</div>
+<button type="button" (click)="updaCity()">Upadate city</button>
+<button type="button" (click)="goBack()">Go back</button>

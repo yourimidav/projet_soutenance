@@ -1,0 +1,21 @@
+<body><h2>Weather near you IP</h2>
+
+<p>
+  <label for="city">City: </label>
+  <input [(ngModel)]="city" type="text" name="city" id="city" />
+  <button (click)="getWeather()">New Request</button>
+</p>
+
+<img
+  *ngIf="icon"
+  src="http://openweathermap.org/img/wn/{{ icon }}@4x.png"
+  alt=""
+/>
+
+<div *ngIf="main">
+  <p>
+    {{ description }} avec une température de {{ main.temp }}°C pour un ressenti
+    de {{ main.feelsLike }}°C.
+  </p>
+</div>
+</body>

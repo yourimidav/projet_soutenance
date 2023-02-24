@@ -1,0 +1,52 @@
+<body><h2>My WorldCities</h2>
+<div class="login-box">
+<p>Add new city</p> 
+<form [formGroup]="cityForm" (ngSubmit)="parseCityValue()">
+    <div class="user-box">
+        <input id="city-name" type="text" formControlName="nomVille" required="" name=""/>
+        <label > City name </label> 
+    </div>
+    <div class="user-box">
+        <input id="country-name" type="text" formControlName="nomPays" required="" name=""/>
+        <label> Country name: </label> 
+    </div>
+    <div>
+        <label for="dateReleve"> <span>Date de releve:</span> </label> 
+        <input id="dateReleve" type="datetime-local" formControlName="dateReleve" placeholder="date Releve">
+    </div>
+    <a>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        
+        <button type="submit" class="submit">Submit</button> 
+    </a>
+    <a>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        
+        <button type="reset" class="submit">Reset</button>
+    </a>
+
+</form>
+    </div>
+
+<ul class="cities">
+    <li *ngFor="let city  of cities">
+        <a routerLink="/cityDetail/{{ city.id }}">
+            <span class="badge">{{ city.id }}</span> {{city.cityName}} ({{ city.normeIso }})
+        </a>
+        <button type="button" class="delete outer" title="Delete city"
+                (click)="deleteCity(city)"> 
+                <div class="inner">
+                    <label class="labeldelete">Delete   </label>
+                  </div>
+            </button>
+    </li>
+</ul>
+
+</body>
+

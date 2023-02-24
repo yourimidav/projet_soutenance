@@ -1,0 +1,72 @@
+<h1>temperatures works!</h1>
+<div class="partieform">
+    <div class="form">
+      <h1 class="title1">le formulaire</h1><br>
+      <form [formGroup]="formulaireTemperature" (ngSubmit)="onSubmit()">
+        <div class="input-container">
+          <label for="city-name" class="placeholder"> <span>City name:</span> </label> 
+          <input id="city-name" type="text" formControlName="ville" placeholder="City name"><br>
+        </div>
+
+        <div class="input-container">
+          <label  class="placeholder" for="tempForm">temperature exact: </label>
+          <input id="tempForm" type="number" formControlName="tempForm"><br>
+        </div>
+
+        <div class="input-container">
+          <label class="placeholder"  for="temperatureMinForm">temperature minimum: </label>
+          <input  id="temperatureMinForm" type="number" formControlName="temperatureMinForm"><br>
+        </div>
+
+        <div class="input-container">
+          <label  class="placeholder"  for="temperatureMaxForm">temperature maximal: </label>
+          <input  d="temperatureMaxForm" type="number" formControlName="temperatureMaxForm"><br>
+        </div>
+
+        <div class="input-container">
+          <label class="placeholder"  for="pressureForm">pressure: </label>
+          <input   id="pressureForm" type="number" formControlName="pressureForm"><br>
+        </div>
+
+        <div class="input-container">
+          <label class="placeholder"  for="humidityForm">Humidity: </label>
+          <input id="humidityForm" type="number" formControlName="humidityForm"><br>
+        </div>
+
+        <div class="input-container">
+          <label class="placeholder"  for="sea_levelForm">sea_level: </label>
+          <input id="sea_levelForm" type="number" formControlName="sea_levelForm"><br>
+        </div>
+
+        <div class="input-container">
+          <label class="placeholder"  for="grnd_levelForm">grnd_level: </label>
+          <input  id="grnd_levelForm" type="number" formControlName="grnd_levelForm"><br>
+        </div>
+
+        <div>
+          <label for="dateReleve"> <span>Date de releve:</span> </label> 
+          <input id="dateReleve" type="datetime-local" formControlName="dateReleve" placeholder="date Releve">
+        </div>
+        <button type="submit" class="submit">Submit</button>
+      </form >
+    </div>
+</div>
+
+<ul class="temperatures">
+  <li *ngFor="let temperature of temperatures">
+
+    <a routerLink="/tempDetail/{{ temperature.id }}">
+      <span class="badge">{{ temperature.id }}</span> {{ temperature.temp}}
+    </a>
+    
+    <button type="button"
+      class="delete outer" title="delete temperature" 
+      (click)="delete(temperature)">
+    <div class="inner">
+      <label class="labeldelete">Delete   </label>
+    </div>
+    </button>
+  </li>
+</ul>
+
+

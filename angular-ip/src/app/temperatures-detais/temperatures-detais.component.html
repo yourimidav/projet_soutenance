@@ -1,0 +1,10 @@
+<div *ngIf="temperature">
+    <h2> {{ temperature.temp  }} Details</h2>
+    <div><span>id: </span>{{ temperature.id }} </div>
+    <div>
+        <label for="temperature">temperature degré: </label>
+        <input type="text" [(ngModel)]="temperature.temp" name="temperature" id="temperature">
+    </div>
+</div>
+<button type="button" (click)="saveTemperature()">Update temp</button>
+<button type="button" (click)="goBack()">Go back</button>
