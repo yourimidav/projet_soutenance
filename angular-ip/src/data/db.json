@@ -1,3 +1,19 @@
 {
-  "markers": []
+  "markers": [
+    {
+      "properties": {
+        "message": "Bonjour",
+        "image": "10d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.383619273680921,
+          48.77462955095365
+        ]
+      },
+      "id": 1
+    }
+  ]
 }
