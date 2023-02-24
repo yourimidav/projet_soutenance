@@ -7,8 +7,20 @@
     </ul>   
 </nav><br>
 
+<h2>Top City</h2>
+<div class="cities">
+
+        <a *ngFor="let city  of cities" routerLink="/cityDetail/{{ city.id }}">
+            {{city.cityName}}
+        </a>
+    </div>
+<app-city-search></app-city-search>
+
 <app-show-ip></app-show-ip>
 <app-show-weather></app-show-weather>
 <router-outlet></router-outlet>
-<app-map-box></app-map-box>
+<!-- <app-map-box></app-map-box> -->
+
+
+
 </body>

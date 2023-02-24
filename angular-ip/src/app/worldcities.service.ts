@@ -20,7 +20,7 @@ export class WorldcitiesService {
     private http: HttpClient
   ) { }
 
-  private hanfleError<T>(operation = 'operation', result?: T){
+  private handleError<T>(operation = 'operation', result?: T){
     return (error: any): Observable<T> => {
       console.error(error);
       this.logMessage(`${operation} failed: ${error.message}`);
@@ -42,7 +42,7 @@ export class WorldcitiesService {
     this.logMessage('Cities fetched');
     return this.http.get<WorldCity[]>(this.worldCitiesUrl).pipe(
       tap((_) => this.logMessage('cities fetched')),
-      catchError(this.hanfleError<WorldCity[]>('getAllCities', []))
+      catchError(this.handleError<WorldCity[]>('getAllCities', []))
     );
   }
 
@@ -56,7 +56,7 @@ export class WorldcitiesService {
     const url = `${this.worldCitiesUrl}/${id}`;
     return this.http.get<WorldCity>(url).pipe(
       tap((_) => this.logMessage(`city fetched by id=${id}`)),
-      catchError(this.hanfleError<WorldCity>(`getCityById with id=${id}`))
+      catchError(this.handleError<WorldCity>(`getCityById with id=${id}`))
     );
   }
 
@@ -67,10 +67,10 @@ export class WorldcitiesService {
    * the @RestController of the Java JPA controller
    */
   getCityByName(name: string): Observable<WorldCity> {
-    const url = `${this.worldCitiesUrl}/${name}`;
+    const url = `${this.worldCitiesUrl}/name/${name}`;
     return this.http.get<WorldCity>(url).pipe(
       tap((_) => this.logMessage(`city fetched by name=${name}`)),
-      catchError(this.hanfleError<WorldCity>(`getCityById with name=${name}`))
+      catchError(this.handleError<WorldCity>(`getCityById with name=${name}`))
     );
   }
 
@@ -83,7 +83,7 @@ export class WorldcitiesService {
   updateCity(city: WorldCity): Observable<WorldCity> {
     return this.http.put<WorldCity>(this.worldCitiesUrl, city, this.httpOptions).pipe(
       tap((_) => this.logMessage(`City with id=${city.id} updated`)),
-      catchError(this.hanfleError<WorldCity>('updateCity'))
+      catchError(this.handleError<WorldCity>('updateCity'))
     );
   }
 
@@ -96,7 +96,7 @@ export class WorldcitiesService {
   addCity(city: WorldCity): Observable<WorldCity>{
     return this.http.post<WorldCity>(this.worldCitiesUrl, city, this.httpOptions).pipe(
       tap((city: WorldCity) => this.logMessage(`City with id=${city.id} added`)),
-      catchError(this.hanfleError<WorldCity>('addCity'))
+      catchError(this.handleError<WorldCity>('addCity'))
     );
   }
 
@@ -110,7 +110,21 @@ export class WorldcitiesService {
     const url = `${this.worldCitiesUrl}/${id}`;
     return this.http.delete<WorldCity>(url, this.httpOptions).pipe(
       tap((_) => this.logMessage(`City designated by id=${id}) deleted`)),
-      catchError(this.hanfleError<WorldCity>('deleteCity'))
+      catchError(this.handleError<WorldCity>('deleteCity'))
     );
   }
+
+  /* GET cities whose name contains search term */
+searchCities(term: string): Observable<WorldCity[]> {
+  if (!term.trim()) {
+    // if not search term, return empty hero array.
+    return of([]);
+  }//cityName
+  return this.http.get<WorldCity[]>(`${this.worldCitiesUrl}/names/${term}`).pipe(
+    tap(x => x.length ?
+       this.logMessage(`found cities matching "${term}"`) :
+       this.logMessage(`no cities matching "${term}"`)),
+    catchError(this.handleError<WorldCity[]>('searchCities', []))
+  );
+}
 }

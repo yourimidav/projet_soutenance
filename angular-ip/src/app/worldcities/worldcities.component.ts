@@ -5,6 +5,8 @@ import { TemperatureService } from '../temperature.service';
 import { WeatherService } from '../weather.service';
 import { WorldcitiesService } from '../worldcities.service';
 import { WorldCity } from '../worldCity';
+import { Observable,of } from 'rxjs';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 @Component({
   selector: 'app-worldcities',
@@ -138,5 +140,7 @@ export class WorldcitiesComponent {
     city.id = id;
     this.worldCityService.deleteCity(city.id).subscribe();
   }
+
+  p: number = 1;
 
 }

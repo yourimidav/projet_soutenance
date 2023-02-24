@@ -35,7 +35,7 @@
     </div>
 
 <ul class="cities">
-    <li *ngFor="let city  of cities">
+    <li *ngFor="let city  of cities| paginate: { itemsPerPage: 10, currentPage: p }">
         <a routerLink="/cityDetail/{{ city.id }}">
             <span class="badge">{{ city.id }}</span> {{city.cityName}} ({{ city.normeIso }})
         </a>
@@ -47,6 +47,6 @@
             </button>
     </li>
 </ul>
-
+<pagination-controls (pageChange)="p = $event" class="float-right"></pagination-controls>
 </body>
 

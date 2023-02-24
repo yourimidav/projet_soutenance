@@ -15,10 +15,13 @@ import { TemperaturesDetaisComponent } from './temperatures-detais/temperatures-
 import { MapBoxComponent } from './map-box/map-box.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { CitySearchComponent } from './city-search/city-search.component';
+import {NgxPaginationModule} from 'ngx-pagination';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 @NgModule({
-  declarations: [AppComponent, ShowIpComponent, ShowWeatherComponent,  TemperaturesComponent, WorldcitiesComponent, WorldcitiesDetailsComponent, TemperaturesDetaisComponent, MapBoxComponent],
-  imports: [BrowserModule, HttpClientModule, FormsModule, AppRoutingModule,ReactiveFormsModule,MatButtonToggleModule, BrowserAnimationsModule],
+  declarations: [AppComponent, ShowIpComponent, ShowWeatherComponent,  TemperaturesComponent, WorldcitiesComponent, WorldcitiesDetailsComponent, TemperaturesDetaisComponent, MapBoxComponent, CitySearchComponent],
+  imports: [BrowserModule, HttpClientModule, FormsModule, AppRoutingModule,ReactiveFormsModule,MatButtonToggleModule, BrowserAnimationsModule,NgxPaginationModule,MatPaginatorModule],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -14,6 +14,51 @@
         ]
       },
       "id": 1
+    },
+    {
+      "properties": {
+        "message": "Bonjour",
+        "image": "10d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3705311002832445,
+          48.86237850223958
+        ]
+      },
+      "id": 2
+    },
+    {
+      "properties": {
+        "message": "Bonjour",
+        "image": "10d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.33447706668494,
+          48.86378887920617
+        ]
+      },
+      "id": 3
+    },
+    {
+      "properties": {
+        "message": "Bonjour",
+        "image": "10d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3124597300249263,
+          48.844678500425715
+        ]
+      },
+      "id": 4
     }
   ]
 }

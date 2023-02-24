@@ -44,7 +44,13 @@ public class WorldCityController {
 		System.out.println("City fetched with name: " + name);
 		return worldCityServ.getWorldCityByCityName(name);
 	}
-	
+
+	@GetMapping("/cities/names/{name}")
+	public List<WorldCity> getWorldCitiesByName(@PathVariable String name) {
+		System.out.println("City fetched with name: " + name);
+		return worldCityServ.getWorldCitiesByCityName(name);
+	}
+
 	@PostMapping("/cities")
 	public WorldCity addWorldCity(@RequestBody WorldCity city) {
 		System.out.println("City saved");

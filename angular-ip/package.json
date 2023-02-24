@@ -23,6 +23,7 @@
     "@types/geojson": "^7946.0.10",
     "@types/mapbox-gl": "^2.7.10",
     "mapbox-gl": "^2.13.0",
+    "ngx-pagination": "^6.0.3",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0"

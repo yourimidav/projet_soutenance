@@ -25,6 +25,11 @@ public class WorldCityService implements WorldCityServiceInterface{
 	}
 
 	@Override
+	public List<WorldCity> getWorldCitiesByCityName(String cityName) {
+		return worldCityRepo.findByCitiesName(cityName);
+	}
+
+	@Override
 	public WorldCity saveWorlCity(WorldCity city) {
 		// TODO Auto-generated method stub
 		return worldCityRepo.save(city);

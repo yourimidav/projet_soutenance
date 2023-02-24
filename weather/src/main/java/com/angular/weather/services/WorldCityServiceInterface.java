@@ -10,6 +10,8 @@ import com.angular.weather.entities.WorldCity;
 public interface WorldCityServiceInterface {
 
 	public WorldCity getWorldCityByCityName (String cityName);
+
+	public List<WorldCity> getWorldCitiesByCityName (String cityName);
 	
 	public WorldCity saveWorlCity (WorldCity city);
 	
