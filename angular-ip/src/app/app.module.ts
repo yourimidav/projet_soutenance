@@ -12,10 +12,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { WorldcitiesDetailsComponent } from './worldcities-details/worldcities-details.component';
 import { TemperaturesComponent } from './temperature/temperatures.component';
 import { TemperaturesDetaisComponent } from './temperatures-detais/temperatures-detais.component';
+import { MapBoxComponent } from './map-box/map-box.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 
 @NgModule({
-  declarations: [AppComponent, ShowIpComponent, ShowWeatherComponent,  TemperaturesComponent, WorldcitiesComponent, WorldcitiesDetailsComponent, TemperaturesDetaisComponent],
-  imports: [BrowserModule, HttpClientModule, FormsModule, AppRoutingModule,ReactiveFormsModule],
+  declarations: [AppComponent, ShowIpComponent, ShowWeatherComponent,  TemperaturesComponent, WorldcitiesComponent, WorldcitiesDetailsComponent, TemperaturesDetaisComponent, MapBoxComponent],
+  imports: [BrowserModule, HttpClientModule, FormsModule, AppRoutingModule,ReactiveFormsModule,MatButtonToggleModule, BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

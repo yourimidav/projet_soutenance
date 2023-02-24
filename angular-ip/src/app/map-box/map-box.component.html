@@ -1,0 +1,30 @@
+<div class="sidebar">
+    <div class="heading">
+      <!-- Ecriture d'un message à enregistrer avec le marqueur -->
+      <input type="text" [(ngModel)]="message" placeholder="your message..." />
+    </div>
+    <div class="container">
+      <h1>Markers</h1>
+      <mat-button-toggle-group
+        class="toggle"
+        [(ngModel)]="toggleButtonState"
+        (value)="(toggleButtonState)"
+        (change)="onToggleChange()"
+      >
+        <mat-button-toggle value="weather"> weather</mat-button-toggle>
+        <mat-button-toggle value="classical"> classical</mat-button-toggle>
+      </mat-button-toggle-group>
+    </div>
+  
+    <!-- Liste des marqueurs enregistrés -->
+    <div id="listings" class="listings" *ngFor="let marker of markers">
+      <!-- Déplacement vers un marqueur -->
+      <button class="marked" (click)="flyTo(marker)">
+        {{ marker.properties.message }}
+      </button>
+      <!-- Suppression d'un marqueur -->
+      <button class="delete" (click)="removeMarker(marker)">Delete</button>
+    </div>
+  </div>
+  <!-- Carte -->
+  <div id="map" class="map"></div>
