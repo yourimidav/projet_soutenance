@@ -3,29 +3,14 @@
     {
       "properties": {
         "message": "Bonjour",
-        "image": "red"
+        "image": "04n"
       },
       "type": "Feature",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          2.3474050224720315,
-          48.84853672105268
-        ]
-      },
-      "id": 1
-    },
-    {
-      "properties": {
-        "message": "Bonjour",
-        "image": "10d"
-      },
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          2.287373000973929,
-          48.85174741469143
+          2.297378150369326,
+          48.843615956756594
         ]
       },
       "id": 2
@@ -33,14 +18,14 @@
     {
       "properties": {
         "message": "Bonjour",
-        "image": "10d"
+        "image": "04n"
       },
       "type": "Feature",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          4.787391416224807,
-          45.78198222430413
+          2.3559160402770374,
+          48.841538598658985
         ]
       },
       "id": 3
@@ -48,29 +33,29 @@
     {
       "properties": {
         "message": "Bonjour",
-        "image": "10d"
+        "image": "04n"
       },
       "type": "Feature",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          3.324507257594206,
-          46.409195853740385
+          2.328065747922892,
+          48.82774955110412
         ]
       },
       "id": 4
     },
     {
       "properties": {
-        "message": "salutaion",
-        "image": "10d"
+        "message": "Bonjour",
+        "image": "04n"
       },
       "type": "Feature",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          0.17967030574473597,
-          48.05480173443016
+          2.545843067538158,
+          48.88833999803546
         ]
       },
       "id": 5
@@ -78,17 +63,197 @@
     {
       "properties": {
         "message": "Bonjour",
-        "image": "10d"
+        "image": "01n"
       },
       "type": "Feature",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          1.7025911965980072,
-          47.54063795401191
+          -75.5755434218248,
+          40.003693899722094
         ]
       },
       "id": 6
+    },
+    {
+      "properties": {
+        "message": "Bonjour",
+        "image": "04d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -107.8776103833406,
+          48.269442552078374
+        ]
+      },
+      "id": 7
+    },
+    {
+      "properties": {
+        "message": "Bonjour",
+        "image": "01d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -117.25095759221676,
+          39.32777407525731
+        ]
+      },
+      "id": 8
+    },
+    {
+      "properties": {
+        "message": "Bonjour",
+        "image": "04d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.96485864765623,
+          36.578596141824505
+        ]
+      },
+      "id": 9
+    },
+    {
+      "properties": {
+        "message": "Bonjour",
+        "image": "13n"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.7804067945873,
+          29.864342039366335
+        ]
+      },
+      "id": 10
+    },
+    {
+      "properties": {
+        "message": "Bonjour",
+        "image": "04n"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          97.14766740858283,
+          36.91318564037948
+        ]
+      },
+      "id": 11
+    },
+    {
+      "properties": {
+        "message": "Bonjour",
+        "image": "04n"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.55228420572621,
+          40.84529971865979
+        ]
+      },
+      "id": 12
+    },
+    {
+      "properties": {
+        "message": "Bonjour",
+        "image": "04n"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.09443661063099,
+          49.07506268105598
+        ]
+      },
+      "id": 13
+    },
+    {
+      "properties": {
+        "message": "Bonjour",
+        "image": "04n"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.821618632239847,
+          44.644174227502305
+        ]
+      },
+      "id": 14
+    },
+    {
+      "properties": {
+        "message": "Bonjour",
+        "image": "04n"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.426845274963426,
+          48.00736726143586
+        ]
+      },
+      "id": 15
+    },
+    {
+      "properties": {
+        "message": "Bonjour",
+        "image": "04n"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.582967040458698,
+          50.036348069573904
+        ]
+      },
+      "id": 16
+    },
+    {
+      "properties": {
+        "message": "Bonjour",
+        "image": "03n"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.584524124873553,
+          46.368517918838535
+        ]
+      },
+      "id": 17
+    },
+    {
+      "properties": {
+        "message": "Bonjour",
+        "image": "04n"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.12223541516812,
+          49.783007803478256
+        ]
+      },
+      "id": 18
     }
   ]
 }

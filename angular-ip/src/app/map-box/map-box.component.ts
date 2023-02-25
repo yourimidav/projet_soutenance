@@ -28,7 +28,12 @@ export class MapBoxComponent {
   sourceId: string = 'weather'; // nom par défaut de la source de données
   layerId: string = 'weather-layer'; // nom par défaut du layer
 
-  marker!:Markers;
+  marker1!:Markers;
+  type1!: string;
+    message1!: string;
+    image1!:string;
+    typegeo1!:string;
+    coordinates1!:number[];
 
   // état initial du bouton
   toggleButtonState: string = 'weather';
@@ -119,17 +124,19 @@ export class MapBoxComponent {
           event.lngLat.lat,
         ];
         ////////////////:c'est ici qu'on doit faire des trucs
-        /* const test =new CustomGeoJson(coordinates, {
-          message: this.weatherService.getWeatherFromcoord(coordinates[0],coordinates[0]).subscribe((data) => {
-            const {
-              message:
-              image:
-            } = data.main;
+         const test =new CustomGeoJson(coordinates, {
+          message: this.weatherService.getWeatherFromcoord(coordinates[1],coordinates[0]).subscribe((data) => {
+            this.type1="Feature";
+            this.message1=data.weather[0].description;
+            this.image1=data.weather[0].icon;
+            this.typegeo1="Point";
+            this.coordinates1=[coordinates[1],coordinates[0]]
+              
+            } 
       
-            this.message =current.description;
       ),
-          image: this.iconId,
-        }); */
+        }); 
+        this.iconId=this.image1;
         // création d'un nouveau marqueur
         const newMarker = new CustomGeoJson(coordinates, {
           message: this.message,
