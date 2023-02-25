@@ -30,10 +30,10 @@ export class MapBoxComponent {
 
   marker1!:Markers;
   type1!: string;
-    message1!: string;
-    image1!:string;
-    typegeo1!:string;
-    coordinates1!:number[];
+  message1!: string;
+  image1!:string;
+  typegeo1!:string;
+  coordinates1!:number[];
 
   // état initial du bouton
   toggleButtonState: string = 'weather';
@@ -49,7 +49,7 @@ export class MapBoxComponent {
     'yellow',
   ];
 
-  constructor(private weatherService: WeatherService,private mapService: MapService) {}
+  constructor(private weatherService: WeatherService,private mapService: MapService,private markerService:MarkersService) {}
 
   ngOnInit() {
     // zoom sur la localisation de l'utilisateur
@@ -131,25 +131,34 @@ export class MapBoxComponent {
             this.image1=data.weather[0].icon;
             this.typegeo1="Point";
             this.coordinates1=[coordinates[1],coordinates[0]]
-              
+            const newmarker: Markers={
+              type: "Feature",
+              message: this.message1,
+              image: this.image1,
+              typegeo: this.typegeo1,
+              coordinates:this.coordinates1
+            };  
+            this.markerService.addMarker(newmarker);
+            this.iconId=this.image1;
+            // création d'un nouveau marqueur
+            const newMarker = new CustomGeoJson(coordinates, {
+              message: this.message,
+              image: this.iconId,
+            });
+            // ajout du marqueur en base de données
+            this.mapService.createMarker(newMarker).subscribe((data) => {
+              this.markers.push(data);
+              // Chargement de l'image du marqueur
+              this.loadImage();
+              // Ajout du marqueur sur la carte
+              this.setMarkers();
+            });
             } 
-      
+            
       ),
-        }); 
-        this.iconId=this.image1;
-        // création d'un nouveau marqueur
-        const newMarker = new CustomGeoJson(coordinates, {
-          message: this.message,
-          image: this.iconId,
         });
-        // ajout du marqueur en base de données
-        this.mapService.createMarker(newMarker).subscribe((data) => {
-          this.markers.push(data);
-          // Chargement de l'image du marqueur
-          this.loadImage();
-          // Ajout du marqueur sur la carte
-          this.setMarkers();
-        });
+        
+        
       });
     });
   }

@@ -144,6 +144,7 @@ export class WorldcitiesComponent {
     }
     this.temperatureService.addTemperature(newTemperature).subscribe((temperature) => {
       this.temperatures.push(temperature);
+      if(temperature.ville)this.cities.push(temperature.ville);
     });
   }
 
