@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
-import { Map, AnySourceImpl } from 'mapbox-gl';
+import { Map, AnySourceImpl, Marker } from 'mapbox-gl';
 import { MapService } from '../map.service';
 import { CustomFeatureCollection, CustomGeoJson } from '../map';
 import { environment } from 'src/environments/environment.development';
 import { FeatureCollection } from 'geojson';
+import { WeatherService } from '../weather.service';
+import { MarkersService } from '../markers.service';
+import { Markers } from '../marker';
 //import { MatButtonToggleGroup } from '@angular/material/button-toggle';
 
 @Component({
@@ -13,9 +16,9 @@ import { FeatureCollection } from 'geojson';
 })
 export class MapBoxComponent {
   map!: Map; // la carte
-  style: string = 'mapbox://styles/mapbox/dark-v11'; // style de la carte
-  lat: number = 46.2276; // latitude à l'initialisation
-  lng: number = 2.2137; // longitude à l'initialisation
+  style: string = 'mapbox://styles/mapbox/light-v11'; // style de la carte
+  lat: number = 0; // latitude à l'initialisation
+  lng: number = 1.297352; // longitude à l'initialisation
   message: string = 'Bonjour'; // message à afficher sous le marqueur
 
   source: any; // source pour créer un marqueur (image)
@@ -24,6 +27,8 @@ export class MapBoxComponent {
   iconId: string = '10d'; // icône représentant la météo
   sourceId: string = 'weather'; // nom par défaut de la source de données
   layerId: string = 'weather-layer'; // nom par défaut du layer
+
+  marker!:Markers;
 
   // état initial du bouton
   toggleButtonState: string = 'weather';
@@ -39,7 +44,7 @@ export class MapBoxComponent {
     'yellow',
   ];
 
-  constructor(private mapService: MapService) {}
+  constructor(private weatherService: WeatherService,private mapService: MapService) {}
 
   ngOnInit() {
     // zoom sur la localisation de l'utilisateur
@@ -51,6 +56,7 @@ export class MapBoxComponent {
   // lorsque le bouton change d'état
   onToggleChange() {
     if (this.toggleButtonState == 'weather') {
+      //this.weatherService.getWeatherFromcoord()
       this.iconId = '10d';
       return;
     }
@@ -112,6 +118,18 @@ export class MapBoxComponent {
           event.lngLat.lng,
           event.lngLat.lat,
         ];
+        ////////////////:c'est ici qu'on doit faire des trucs
+        /* const test =new CustomGeoJson(coordinates, {
+          message: this.weatherService.getWeatherFromcoord(coordinates[0],coordinates[0]).subscribe((data) => {
+            const {
+              message:
+              image:
+            } = data.main;
+      
+            this.message =current.description;
+      ),
+          image: this.iconId,
+        }); */
         // création d'un nouveau marqueur
         const newMarker = new CustomGeoJson(coordinates, {
           message: this.message,
