@@ -1,52 +1,83 @@
-<body><h2>My WorldCities</h2>
-<div class="login-box">
-<p>Add new city</p> 
-<form [formGroup]="cityForm" (ngSubmit)="parseCityValue()">
-    <div class="user-box">
-        <input id="city-name" type="text" formControlName="nomVille" required="" name=""/>
-        <label > City name </label> 
-    </div>
-    <div class="user-box">
-        <input id="country-name" type="text" formControlName="nomPays" required="" name=""/>
-        <label> Country name: </label> 
-    </div>
-    <div>
-        <label for="dateReleve"> <span>Date de releve:</span> </label> 
-        <input id="dateReleve" type="datetime-local" formControlName="dateReleve" placeholder="date Releve">
-    </div>
-    <a>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        
-        <button type="submit" class="submit">Submit</button> 
-    </a>
-    <a>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        
-        <button type="reset" class="submit">Reset</button>
-    </a>
+<body>
+    <h2>My WorldCities</h2>
+    <div class="login-box">
+        <p>Add new city</p> 
+        <form [formGroup]="cityForm" (ngSubmit)="parseCityValue()">
+            <div class="user-box">
+                <input id="city-name" type="text" formControlName="nomVille" required="" name=""/>
+                <label > City name </label> 
+            </div>
+            <!--<div class="user-box">
+                <input id="country-name" type="text" formControlName="nomPays" required="" name=""/>
+                <label> Country name: </label> 
+            </div>-->
+            <div >
+                <label for="dateReleve"> <span>Date de releve:</span> </label> 
+                <input id="dateReleve" type="datetime-local" formControlName="dateReleve" placeholder="date Releve">
+            </div>
+            <a>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                
+                <button type="submit" class="submit">Submit</button> 
+            </a>
+            <a>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                
+                <button type="reset" class="submit">Reset</button>
+            </a>
 
-</form>
+        </form>
     </div>
 
-<ul class="cities">
-    <li *ngFor="let city  of cities| paginate: { itemsPerPage: 10, currentPage: p }">
-        <a routerLink="/cityDetail/{{ city.id }}">
-            <span class="badge">{{ city.id }}</span> {{city.cityName}} ({{ city.normeIso }})
-        </a>
-        <button type="button" class="delete outer" title="Delete city"
-                (click)="deleteCity(city)"> 
-                <div class="inner">
-                    <label class="labeldelete">Delete   </label>
-                  </div>
-            </button>
-    </li>
-</ul>
-<pagination-controls (pageChange)="p = $event" class="float-right"></pagination-controls>
+
+    <div class="table-wrapper">
+        
+        <table class="fl-table">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>Country</th>
+                    <th>City Name</th>
+                    <th>ASCII Code</th>
+                    <th>Longitude</th>
+                    <th>Latitude</th>
+                    <th>Norme ISO</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            
+            <tbody *ngFor="let city  of cities | paginate: { itemsPerPage: 10, currentPage: p }">
+                <tr>
+                   <td>
+                        <a routerLink="/cityDetail/{{ city.id }}">
+                        {{ city.id }}
+                        </a>
+                    </td>
+                    <td>{{ city.countryName }}</td>
+                    <td>{{ city.cityName }}</td>
+                    <td>{{ city.cityAscii }}</td>
+                    <td>{{ city.latitude }} </td>
+                    <td>{{ city.longitude }} </td>
+                    <td>{{ city.normeIso }}</td>
+                    <td>
+                        <button type="button" class="delete outer" title="Delete city"
+                            (click)="deleteCity(city)"> 
+                            <div class="inner">
+                                <label class="labeldelete">Delete   </label>
+                            </div>
+                        </button>
+                     </td>
+            </tbody>
+        </table>
+        
+    </div>
+    <pagination-controls (pageChange)="p = $event" class="float-right"></pagination-controls>
+
 </body>
 

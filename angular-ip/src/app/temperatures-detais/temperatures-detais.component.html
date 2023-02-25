@@ -1,10 +1,62 @@
 <div *ngIf="temperature">
-    <h2> {{ temperature.temp  }} Details</h2>
+    <h2> Les données météos enregistré pour  {{ temperature.ville?.cityName  }} ({{ temperature.ville?.countryName}}) Details</h2>
+    <div class="table-wrapper">
+        <table class="fl-table">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>Date de releve</th>
+                    <th>temperature</th>
+                    <th>Ressenti</th>
+                    <th>Temperature max</th>
+                    <th>Temperature min</th>
+                    <th>Pression</th>
+                    <th>Humidite</th>
+                    <th>niveau de mer</th>
+                    <th>grand level</th>
+                    <th>Longitude</th>
+                    <th>Latitude</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ temperature.id }}</td>
+                    <td>{{ temperature.dateReleve }}</td>
+                    <td>{{ temperature.temp }} °C</td>
+                    <td>{{ temperature.feelsLike }} °C</td>
+                    <td>{{ temperature.temperatureMax }} °C</td>
+                    <td>{{ temperature.temperatureMin }} °C</td>
+                    <td>{{ temperature.pressure }}</td>
+                    <td>{{ temperature.humidity }}</td>
+                    <td>{{ temperature.sea_level }}</td>
+                    <td>{{ temperature.grndLevel }}</td>
+                    <td>{{ temperature.ville?.latitude }}</td>
+                    <td>{{ temperature.ville?.longitude }}</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>id</th>
+                    <th>Date de releve</th>
+                    <th>temperature</th>
+                    <th>Ressenti</th>
+                    <th>Temperature max</th>
+                    <th>Temperature min</th>
+                    <th>Pression</th>
+                    <th>Humidite</th>
+                    <th>niveau de mer</th>
+                    <th>grand level</th>
+                    <th>Longitude</th>
+                    <th>Latitude</th>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
     <div><span>id: </span>{{ temperature.id }} </div>
     <div>
-        <label for="temperature">temperature degré: </label>
+        <label for="temperature">Derniere température enregisrer: </label>
         <input type="text" [(ngModel)]="temperature.temp" name="temperature" id="temperature">
     </div>
 </div>
-<button type="button" (click)="saveTemperature()">Update temp</button>
+<button type="button" (click)="saveTemperature()">Update last temp</button>
 <button type="button" (click)="goBack()">Go back</button>

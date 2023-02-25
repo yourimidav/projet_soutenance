@@ -47,7 +47,14 @@ getTemperatures(): Observable<Temperature[]> {
   );
 }
 
-
+getAllTemperaturesForWille(id: number): Observable<Temperature[]> {
+  this.log('fetched temperatures for city');
+  const url = `${this.temperatureUrl+"/ville"}/${id}`;
+  return this.http.get<Temperature[]>(url).pipe(
+    tap((_) => this.log('fetched temperatures')),
+    catchError(this.handleError<Temperature[]>('getTemperatures', []))
+  );
+}
 
   /** GET temperature by id. Will 404 if id not found */
   getTemperature(id: number): Observable<Temperature> {
@@ -59,8 +66,8 @@ getTemperatures(): Observable<Temperature[]> {
   }
 
   getByVille(ville: WorldCity): Observable<Temperature[]> {
-    const url = `${this.temperatureUrl}/${ville}`;
-    return this.http.get<Temperature[]>(this.temperatureUrl).pipe(
+    const url = `"${this.temperatureUrl}"/${ville}`;
+    return this.http.get<Temperature[]>(url).pipe(
       tap((_) => this.log(`fetched temperature id=${ville}`)),
       catchError(this.handleError<Temperature[]>('getTemperatures', []))
     );

@@ -6,7 +6,7 @@ import { WeatherService } from '../weather.service';
 import { WorldcitiesService } from '../worldcities.service';
 import { WorldCity } from '../worldCity';
 import { Observable,of } from 'rxjs';
-import {NgxPaginationModule} from 'ngx-pagination';
+//import {NgxPaginationModule} from 'ngx-pagination';
 
 @Component({
   selector: 'app-worldcities',
@@ -16,12 +16,17 @@ import {NgxPaginationModule} from 'ngx-pagination';
 export class WorldcitiesComponent {
 
   cities: WorldCity[] = [];
-  cityExist!: WorldCity;
+  city!: WorldCity;
   temperatures:Temperature[]=[];
   //Données Ville
   longi!: number;
   lati!: number;
   isoName!: string;
+
+  nom!: string;
+
+  //Data pour recuperer le nom du pays
+  associatedCountryName = new Intl.DisplayNames(['en'], { type: 'region' });
 
   //Donnée Temperature lié a la ville
   tempera!: number;
@@ -35,7 +40,6 @@ export class WorldcitiesComponent {
 
   cityForm = new FormGroup ({
     nomVille: new FormControl('', Validators.required),
-    nomPays: new FormControl('', Validators.required),
     dateReleve: new FormControl('', Validators.required)
   });
   
@@ -55,13 +59,13 @@ export class WorldcitiesComponent {
       this.isoName = data.sys.country;
       //Temperature
       this.tempera = data.main.temp;
-        this.ressenti = data.main.feels_like;
-        this.temperaMin = data.main.temp_min;
-        this.temperaMax = data.main.temp_max;
-        this.pression = data.main.pressure;
-        this.humidite = data.main.humidity;
-        this.niveauMer =  data.main.sea_level;
-        this.grnd_niveau = data.main.grnd_level;
+      this.ressenti = data.main.feels_like;
+      this.temperaMin = data.main.temp_min;
+      this.temperaMax = data.main.temp_max;
+      this.pression = data.main.pressure;
+      this.humidite = data.main.humidity;
+      this.niveauMer =  data.main.sea_level;
+      this.grnd_niveau = data.main.grnd_level;
     }, 
   complete: () => this.addCityAndTemperature()});
   }
@@ -72,7 +76,9 @@ export class WorldcitiesComponent {
       cityAscii: this.cityForm.value.nomVille+'',
       latitude: this.lati,
       longitude: this.longi,
-      countryName: this.cityForm.value.nomPays+'',
+      //countryName: this.cityForm.value.nomPays+'',
+      //console.log(regionNamesInEnglish.of('US'));
+      countryName: this.associatedCountryName.of(this.isoName)+'',
       normeIso: this.isoName,
     };
 
@@ -96,7 +102,7 @@ export class WorldcitiesComponent {
   parseCityValue(): void{
     this.getWeatherCoord(this.cityForm.value.nomVille+'');
   }
-  //GET a city
+  //GET all cities
   getCities(): void{
     this.worldCityService.getAllCities().subscribe({
       next: (citiesFromObservable) => {
@@ -106,6 +112,19 @@ export class WorldcitiesComponent {
       error: (error) => console.error(error),
       complete: () => console.log('Completed!'),
     });
+  }
+
+  //GET a city
+  getCity(nomVille: string): WorldCity{
+    this.worldCityService.getCityByName(nomVille).subscribe({
+      next: (citiesFromObservable) => {
+        this.city = citiesFromObservable;
+        console.log('City datas retrieved: ', citiesFromObservable);
+      },
+      error: (error) => console.error(error),
+      complete: () => console.log('Completed!'),
+    });
+    return this.city;
   }
 
   //PUT a city
@@ -118,7 +137,11 @@ export class WorldcitiesComponent {
 
   //PUT a temperature
   addTemperature(newTemperature: Temperature): void{
+    //this.nom =  newTemperature.ville?.cityName+'';
     if (!newTemperature) return;
+    if (this.getCity(newTemperature.ville?.cityName+'') != null){
+      
+    }
     this.temperatureService.addTemperature(newTemperature).subscribe((temperature) => {
       this.temperatures.push(temperature);
     });

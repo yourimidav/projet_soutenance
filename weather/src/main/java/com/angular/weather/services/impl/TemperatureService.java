@@ -52,4 +52,10 @@ public class TemperatureService implements TemperatureServiceInterface {
         t.setTemp(temp);
         return temprepo.save(t);
     }
+
+	@Override
+	public List<Temperature> findAllTemperatureByVilleId(Long id) {
+		// TODO Auto-generated method stub
+		return temprepo.findByVilleId(id);
+	}
 }

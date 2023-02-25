@@ -32,9 +32,15 @@ public class TemperatureController {
     }
 
     @GetMapping("/ville")
-    public List<Temperature> getByVille(WorldCity ville){
-        System.out.println("fetched one by ville");
+    public List<Temperature> getByVille( WorldCity ville){
+        System.out.println("fetched all temp by ville");
         return temperatureServiceInterface.getByVille(ville);
+    }
+    
+    @GetMapping("/erature/ville/{id}")
+    public List<Temperature> getAllTempByVilleId(@PathVariable Long id){
+        System.out.println("fetched temperature by ville_id= " +id);
+        return temperatureServiceInterface.findAllTemperatureByVilleId(id);
     }
 
     @DeleteMapping ("/erature/{id}")

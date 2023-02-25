@@ -44,6 +44,7 @@ export class TemperaturesComponent {
       humidity: parseFloat(this.formulaireTemperature.value.humidityForm ?? '0'),
       sea_level: parseFloat(this.formulaireTemperature.value.sea_levelForm ?? '0'),
       grndLevel: parseFloat(this.formulaireTemperature.value.grnd_levelForm ?? '0')
+      //ville: null;
     };
     this.temperatureService.addTemperature(newTemperature).subscribe((temperature) => {
       this.temperatures.push(temperature);

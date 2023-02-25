@@ -13,6 +13,8 @@ public interface TemperatureServiceInterface {
     public Temperature addTemperature(Temperature temperature);
 
     public Temperature findTemperatureById(Long id);
+    
+    public List<Temperature> findAllTemperatureByVilleId(Long id);
 
     public List<Temperature> findAllTemperature();
 

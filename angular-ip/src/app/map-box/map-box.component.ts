@@ -4,7 +4,7 @@ import { MapService } from '../map.service';
 import { CustomFeatureCollection, CustomGeoJson } from '../map';
 import { environment } from 'src/environments/environment.development';
 import { FeatureCollection } from 'geojson';
-import { MatButtonToggleGroup } from '@angular/material/button-toggle';
+//import { MatButtonToggleGroup } from '@angular/material/button-toggle';
 
 @Component({
   selector: 'app-map-box',

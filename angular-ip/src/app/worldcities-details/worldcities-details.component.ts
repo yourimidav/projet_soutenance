@@ -6,6 +6,7 @@ import { Location } from '@angular/common';
 import { WeatherService } from '../weather.service';
 import { MainTemperature } from '../mainTemperature';
 import { Temperature } from '../temperature';
+import { TemperatureService } from '../temperature.service';
 
 @Component({
   selector: 'app-worldcities-details',
@@ -19,21 +20,40 @@ export class WorldcitiesDetailsComponent {
   icon?: string;
   description?: string;
   temperature!: Temperature;
+  temperatures!: Temperature[];
 
   constructor(
     private route: ActivatedRoute,
     private worldCitiesService: WorldcitiesService,
+    private temperatureService: TemperatureService,
     private location: Location,
     private weatherService: WeatherService,
   ){}
 
   ngOnInit(): void {
     this.getCity();
+    //this.getAllTemperaureCity();
   }
 
   getCity(): void{
     const id: number = Number(this.route.snapshot.paramMap.get('id'));
     this.worldCitiesService.getCityById(id).subscribe((city) => (this.city = city));
+  }
+
+  getAllTemperaureCity(city: WorldCity): void{
+    //const id: number = Number(this.route.snapshot.paramMap.get('id'));
+    //this.city = this.worldCitiesService.getCityById(id).subscribe((city) => (this.city = city));
+    // TODO
+    //const id: number = Number(this.route.snapshot.paramMap.get('id'));
+    //this.worldCitiesService.getCityById(id).subscribe((city) => (this.city = city));
+    this.temperatureService.getByVille(city).subscribe({
+      next: (temperaturesFromObservable) => {
+        this.temperatures = temperaturesFromObservable;
+        console.log('Retrieved temperatures data :', temperaturesFromObservable);
+      },
+      error: (error) => console.error(error),
+      complete: () => console.log('Completed!'),
+    });
   }
 
   saveCity(): void {

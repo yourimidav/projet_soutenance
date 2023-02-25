@@ -52,21 +52,49 @@
     </div>
 </div>
 
-<ul class="temperatures">
-  <li *ngFor="let temperature of temperatures">
+<div class="table-wrapper">
+        
+  <table class="fl-table">
+      <thead>
+          <tr>
+              <th>id</th>
+              <th>Country</th>
+              <th>City Name</th>
+              <th>Longitude</th>
+              <th>Latitude</th>
+              <th>Temperature</th>
+              <th>Feels like</th>
+              <th>Date relevé</th>
+              <th>Action</th>
+          </tr>
+      </thead>
+      
+      <tbody *ngFor="let temperature of temperatures">
+          <tr>
+             <td>
+                  <a routerLink="/tempDetail/{{ temperature.id }}">
+                  {{ temperature.id }}
+                  </a>
+              </td>
+              <td>{{ temperature.ville?.countryName }}</td>
+              <td>{{ temperature.ville?.cityName }}</td>
+              <td>{{ temperature.ville?.longitude }}</td>
+              <td>{{ temperature.ville?.latitude }} </td>
+              <td>{{ temperature.temp }} °C</td>
+              <td>{{ temperature.feelsLike }} °C</td>
+              <td>{{ temperature.dateReleve }}</td>
+              <td>
+                  <button type="button" class="delete outer" title="Delete city"
+                      (click)="delete(temperature)"> 
+                      <div class="inner">
+                          <label class="labeldelete">Delete   </label>
+                      </div>
+                  </button>
+               </td>
+      </tbody>
+  </table>
 
-    <a routerLink="/tempDetail/{{ temperature.id }}">
-      <span class="badge">{{ temperature.id }}</span> {{ temperature.temp}}
-    </a>
-    
-    <button type="button"
-      class="delete outer" title="delete temperature" 
-      (click)="delete(temperature)">
-    <div class="inner">
-      <label class="labeldelete">Delete   </label>
-    </div>
-    </button>
-  </li>
-</ul>
+</div>
+
 
 
