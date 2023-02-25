@@ -13,10 +13,10 @@ public class Marqueur {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String type;
+    private String type;//"Feature"
     private String message;
-    private String image;
-    private String typegeo;
+    private String image; //"10d"
+    private String typegeo;// "Points"
     private double[] coordinates;
 
 

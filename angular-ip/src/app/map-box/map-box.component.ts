@@ -34,6 +34,8 @@ export class MapBoxComponent {
   image1!:string;
   typegeo1!:string;
   coordinates1!:number[];
+  nomville!:string;
+  temp!:string;
 
   // état initial du bouton
   toggleButtonState: string = 'weather';
@@ -130,7 +132,9 @@ export class MapBoxComponent {
             this.message1=data.weather[0].description;
             this.image1=data.weather[0].icon;
             this.typegeo1="Point";
-            this.coordinates1=[coordinates[1],coordinates[0]]
+            this.coordinates1=[coordinates[1],coordinates[0]];
+            this.nomville=data.name;
+            this.temp=data.main.temp;
             const newmarker: Markers={
               type: "Feature",
               message: this.message1,
@@ -142,7 +146,7 @@ export class MapBoxComponent {
             this.iconId=this.image1;
             // création d'un nouveau marqueur
             const newMarker = new CustomGeoJson(coordinates, {
-              message: this.message,
+              message: this.message+" "+this.nomville+"\ntemps : "+this.message1+"\n et il fait : "+this.temp+"  degrés.",
               image: this.iconId,
             });
             // ajout du marqueur en base de données

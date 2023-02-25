@@ -31,7 +31,7 @@ export class MarkersService {
 
     getAllMarkers(): Observable<Markers[]>{
       return this.http.get<Markers[]>(this.markersUrl).pipe(
-        tap((_) => this.logMessage('cities fetched')),
+        tap((_) => this.logMessage('markers fetched')),
         catchError(this.handleError<Markers[]>('getAllMarkers', []))
       );
     }
@@ -40,7 +40,7 @@ export class MarkersService {
     getMarkerById(id: number): Observable<Markers> {
       const url = `${this.markersUrl}/${id}`;
       return this.http.get<Markers>(url).pipe(
-        tap((_) => this.logMessage(`merker fetched by id=${id}`)),
+        tap((_) => this.logMessage(`marker fetched by id=${id}`)),
         catchError(this.handleError<Markers>(`getMarkerById with id=${id}`))
       );
     }
