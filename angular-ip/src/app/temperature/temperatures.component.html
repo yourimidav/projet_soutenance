@@ -69,7 +69,7 @@
           </tr>
       </thead>
       
-      <tbody *ngFor="let temperature of temperatures">
+      <tbody *ngFor="let temperature of temperatures | paginate: { itemsPerPage: 10, currentPage: p }">
           <tr>
              <td>
                   <a routerLink="/tempDetail/{{ temperature.id }}">
@@ -93,6 +93,7 @@
                </td>
       </tbody>
   </table>
+  <pagination-controls (pageChange)="p = $event" class="float-right"></pagination-controls>
 
 </div>
 

@@ -14,6 +14,9 @@ export class TemperaturesComponent {
 
   temperatures:Temperature[]=[];
 
+  //Pour gestion pagination
+  p: number = 1;
+  
   formulaireTemperature = new FormGroup({
     ville: new FormControl(''),
     tempForm: new FormControl(''),
