@@ -13,7 +13,7 @@ import { MatButtonToggleGroup } from '@angular/material/button-toggle';
 })
 export class MapBoxComponent {
   map!: Map; // la carte
-  style: string = 'mapbox://styles/mapbox/light-v11'; // style de la carte
+  style: string = 'mapbox://styles/mapbox/dark-v11'; // style de la carte
   lat: number = 46.2276; // latitude à l'initialisation
   lng: number = 2.2137; // longitude à l'initialisation
   message: string = 'Bonjour'; // message à afficher sous le marqueur
