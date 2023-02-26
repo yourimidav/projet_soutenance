@@ -1,22 +1,24 @@
-<body>
+<body><div class="vide"></div>
     <h2>My WorldCities</h2>
-    <div class="container">
+    <div class="login-box">
         <p>Add new city</p> 
         <form [formGroup]="cityForm" (ngSubmit)="parseCityValue()">
-            <div class="row">
-                <div class="col-25"> 
-                    <label > City name </label> 
-                </div>
-                <div class="col-75">
-                    <input id="city-name" type="text" formControlName="nomVille" required name="" placeholder="Exemple Paris"/>
-                </div>
+            <div class="user-box">
+                <input id="city-name" type="text" formControlName="nomVille" required="" name=""/>
+                <label > City name </label> 
             </div>
-            <div class="row">
-                <input type="submit" class="submit" value="Submit">
-            </div>
+            <a>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+        
+                <button type="submit" class="submit">Submit</button> 
+            </a>
+        
         </form>
-    </div>
-
+    
+</div>
     <div class="table-wrapper">
         
         <table class="fl-table">

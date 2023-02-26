@@ -99,10 +99,10 @@ h1{
 
   .scroller {
     width: 100%;
-    height: 66%;
+    height: 75%;
     overflow-y: scroll;
     scrollbar-color: rgb(255,191,0) rgb(45,130,183);
-    scrollbar-width: thin;
+    scrollbar-width:auto;
     
   }
   

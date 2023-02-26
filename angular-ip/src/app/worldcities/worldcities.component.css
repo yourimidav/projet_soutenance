@@ -178,8 +178,8 @@ li{
   .login-box {
     text-align: center;
     position: absolute;
-    top: 50%;
-    left: 20%;
+    top: 110%;
+    left: 50%;
     width: 400px;
     padding: 40px;
     margin: 20px auto;
@@ -356,7 +356,10 @@ li{
     border-radius: 5px;
   }
 
-
+.vide{
+  background: linear-gradient(180deg, rgb(255,191,0), rgb(45,130,183));
+  height: 400px;
+}
 
 button{
   background-color: black;
@@ -373,9 +376,9 @@ button{
 body{
   font-family: Helvetica;
   -webkit-font-smoothing: antialiased;
-  background: rgba( 71, 147, 227, 1);
-   
+  background: rgba( 45,130,183, 1);
 }
+
 h2{
   text-align: center;
   font-size: 18px;
