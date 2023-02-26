@@ -238,7 +238,7 @@ export class MapBoxComponent {
             //Add en BDD
             //this.addMarqueurEnBDD(this.marqueur);
             
-            this.markerService.addMarker(newmarker);
+            //this.markerService.addMarker(newmarker);
             this.iconId=this.image1;
             // création d'un nouveau marqueur
             const newMarker = new CustomGeoJson(coordinates, {

@@ -3,6 +3,9 @@ body {
     font: 400 15px/22px 'Source Sans Pro', 'Helvetica Neue', sans-serif;
     padding: 0;
     -webkit-font-smoothing: antialiased;
+    background-color: green;
+    background: transparent;
+    height: 150%
   }
   
   input {
@@ -79,3 +82,12 @@ body {
     justify-content: space-around;
     align-items: center;
   }
+
+  .scroller {
+    width: 100%;
+    height: 70%;
+    overflow-y: scroll;
+    scrollbar-color: orange green;
+    scrollbar-width: thin;
+  }
+  

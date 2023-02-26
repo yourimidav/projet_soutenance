@@ -2,78 +2,228 @@
   "markers": [
     {
       "properties": {
-        "message": "Bonjour Provins\ntemps : ciel dégagé\n et il fait : 0.25  degrés.",
+        "message": "Bonjour Paris 20 Ménilmontant\ntemps : partiellement nuageux\n et il fait : 4.21  degrés.",
+        "image": "03d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3791086853414356,
+          48.845614210250716
+        ]
+      },
+      "id": 1
+    },
+    {
+      "properties": {
+        "message": "hello Maplewood\ntemps : peu nuageux\n et il fait : -3.11  degrés.",
+        "image": "02n"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.2930413355823,
+          40.733618625404176
+        ]
+      },
+      "id": 2
+    },
+    {
+      "properties": {
+        "message": "hello Philadelphie\ntemps : couvert\n et il fait : -0.7  degrés.",
+        "image": "04n"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.19740568729804,
+          39.96121819086625
+        ]
+      },
+      "id": 3
+    },
+    {
+      "properties": {
+        "message": "hello Tatebayashi\ntemps : ciel dégagé\n et il fait : 3.25  degrés.",
         "image": "01n"
       },
       "type": "Feature",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          3.29874955048183,
-          48.55505089443042
+          139.46382427968513,
+          36.241773827623916
         ]
       },
       "id": 4
     },
     {
       "properties": {
-        "message": "Bonjour Saint-Denis\ntemps : ciel dégagé\n et il fait : 1.25  degrés.",
+        "message": "hello ‘Ewa Beach\ntemps : ciel dégagé\n et il fait : 22.27  degrés.",
         "image": "01n"
       },
       "type": "Feature",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          2.334528706743214,
-          48.91154082671156
+          -158.00520075524202,
+          21.328250833218377
         ]
       },
       "id": 5
     },
     {
       "properties": {
-        "message": "Bonjour Bayreuth\ntemps : partiellement nuageux\n et il fait : -3.31  degrés.",
-        "image": "03n"
+        "message": "hello El Battan\ntemps : partiellement nuageux\n et il fait : 17.86  degrés.",
+        "image": "03d"
       },
       "type": "Feature",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          11.594079956699034,
-          49.93519360305157
+          9.94258924639422,
+          36.81386009986227
         ]
       },
       "id": 6
     },
     {
       "properties": {
-        "message": "Bonjour Vnukovo District\ntemps : nuageux\n et il fait : 1.98  degrés.",
-        "image": "04d"
-      },
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          37.22751923448732,
-          55.63108319512054
-        ]
-      },
-      "id": 7
-    },
-    {
-      "properties": {
-        "message": "Bonjour Clermont-Ferrand\ntemps : peu nuageux\n et il fait : 2.66  degrés.",
+        "message": "hello Bab El Jazira\ntemps : peu nuageux\n et il fait : 17.85  degrés.",
         "image": "02d"
       },
       "type": "Feature",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          3.0821916698133123,
-          45.778441782072576
+          10.167430329120236,
+          36.80080674626892
+        ]
+      },
+      "id": 7
+    },
+    {
+      "properties": {
+        "message": "hello Tremestieri Etneo\ntemps : peu nuageux\n et il fait : 14.91  degrés.",
+        "image": "02d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.057289685172464,
+          37.57307148411188
         ]
       },
       "id": 8
+    },
+    {
+      "properties": {
+        "message": "hello Anguillara Sabazia\ntemps : couvert\n et il fait : 11.25  degrés.",
+        "image": "04d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.302666101381817,
+          42.094107343370865
+        ]
+      },
+      "id": 9
+    },
+    {
+      "properties": {
+        "message": "hello Moriondo Torinese\ntemps : légères chutes de neige\n et il fait : 2.99  degrés.",
+        "image": "13d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.937990542206137,
+          45.03864070515243
+        ]
+      },
+      "id": 10
+    },
+    {
+      "properties": {
+        "message": "hello Blanquefort\ntemps : ciel dégagé\n et il fait : 6.29  degrés.",
+        "image": "01d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.5924103833885397,
+          44.91946433598318
+        ]
+      },
+      "id": 11
+    },
+    {
+      "properties": {
+        "message": "Bonjour Boulogne-Billancourt\ntemps : nuageux\n et il fait : 4.21  degrés.",
+        "image": "04d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2723897304722698,
+          48.82532334414924
+        ]
+      },
+      "id": 12
+    },
+    {
+      "properties": {
+        "message": "Bonjour Arcueil\ntemps : ciel dégagé\n et il fait : 4.44  degrés.",
+        "image": "01d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.322011773927244,
+          48.79595763010039
+        ]
+      },
+      "id": 13
+    },
+    {
+      "properties": {
+        "message": "Bonjour Vanves\ntemps : ciel dégagé\n et il fait : 5.01  degrés.",
+        "image": "01d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2941187775857372,
+          48.83684735928111
+        ]
+      },
+      "id": 14
+    },
+    {
+      "properties": {
+        "message": "Bonjour Vanves\ntemps : ciel dégagé\n et il fait : 5.01  degrés.",
+        "image": "01d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2973380917685517,
+          48.83601141661049
+        ]
+      },
+      "id": 15
     }
   ]
 }

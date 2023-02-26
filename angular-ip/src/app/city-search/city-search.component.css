@@ -14,6 +14,8 @@
     max-width: 600px;
     box-sizing: border-box;
     display: block;
+    margin-left: auto;
+    margin-right: auto
   }
   
   input:focus {

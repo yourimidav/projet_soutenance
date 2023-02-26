@@ -166,6 +166,22 @@ export class WorldcitiesComponent {
     city.id = id;
     this.worldCityService.deleteCity(city.id).subscribe();
     
+
+    /* this.cities = this.cities.filter((c) => c !== city);
+    const id = city.id !== undefined ? city.id : 0;
+    city.id = id;
+    this.worldCityService.deleteCity(city.id).subscribe(); */
+    /* this.cities = this.cities.filter((c) => c !== city);
+    const id = city.id !== undefined ? city.id : 0;
+    city.id = id;
+    this.temperatureService.getByVille(city).subscribe((data) => {
+      data.forEach((datau) => {
+        if(datau.id)this.temperatureService.deleteTemperature(datau.id);
+      })
+      
+    this.worldCityService.deleteCity(id).subscribe(() => {
+      console.log('La ville a été supprimée avec succès.');
+    });}); */
   }
 
   p: number = 1;

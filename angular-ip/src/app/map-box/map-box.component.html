@@ -17,7 +17,7 @@
     </div>
   
     <!-- Liste des marqueurs enregistrés -->
-    <div id="listings" class="listings"  *ngFor="let marker of markers">
+<div class="scroller"><div id="listings" class="listings "  *ngFor="let marker of markers">
       <!-- Déplacement vers un marqueur -->
       <button class="marked" (click)="flyTo(marker)">
         {{ marker.properties.message }}
@@ -25,6 +25,6 @@
       <!-- Suppression d'un marqueur -->
       <button class="delete" (click)="removeMarker(marker)">Delete</button>
     </div>
-  </div>
+  </div></div>
   <!-- Carte -->
   <div id="map" class="map"></div>
