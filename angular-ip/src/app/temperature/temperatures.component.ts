@@ -17,6 +17,17 @@ export class TemperaturesComponent {
   temperatures:Temperature[]=[];
   city!: WorldCity;
 
+  maVille!: WorldCity;
+  cityName!: string;
+  cityAscii!: string;
+  latitude!: number;
+  longitude!: number;
+  countryName!: string;
+  normeIso!: string;
+
+  //Data pour recuperer le nom du pays
+  associatedCountryName = new Intl.DisplayNames(['en'], { type: 'region' });
+
   //Pour gestion pagination
   p: number = 1;
   
@@ -41,6 +52,23 @@ export class TemperaturesComponent {
 
 
   onSubmit() {
+    this.getWeatherCoord(this.formulaireTemperature.value.villeForm+'');
+    /**
+     * this.longitude = data.coord.lon;
+      this.latitude = data.coord.lat;
+      this.normeIso = data.sys.country;
+      this.cityName = cityName;
+      this.cityAscii = cityName;
+      this.countryName = this.asso
+     */
+    const maVille: WorldCity = {
+      cityName: this.cityName ,
+      cityAscii: this.cityAscii,
+      latitude: this.longitude,
+      longitude: this.latitude,
+      countryName: this.countryName,
+      normeIso: this.normeIso
+    }
     const newTemperature: Temperature = {
       temp: parseFloat(this.formulaireTemperature.value.tempForm ?? '0'),
       dateReleve: this.formulaireTemperature.value.dateReleve+'',
@@ -51,11 +79,24 @@ export class TemperaturesComponent {
       humidity: parseFloat(this.formulaireTemperature.value.humidityForm ?? '0'),
       sea_level: parseFloat(this.formulaireTemperature.value.sea_levelForm ?? '0'),
       grndLevel: parseFloat(this.formulaireTemperature.value.grnd_levelForm ?? '0'),
+      ville: maVille
       //ville: this.worldCitiesService.getCityByName(this.formulaireTemperature.value.villeForm+'').subscribe(((city) => (this.city = city)))
     };
     this.temperatureService.addTemperature(newTemperature).subscribe((temperature) => {
       this.temperatures.push(temperature);
     });
+  }
+
+  getWeatherCoord(cityName: string): void {
+    this.weatherService.getWeatherFromCity(cityName).subscribe({next: (data) => {
+      this.longitude = data.coord.lon;
+      this.latitude = data.coord.lat;
+      this.normeIso = data.sys.country;
+      this.cityName = cityName;
+      this.cityAscii = cityName;
+      this.countryName = this.associatedCountryName.of(data.sys.country)+'';
+    }, 
+  complete: () => console.log("City crée")});
   }
 
   ngOnInit(): void {

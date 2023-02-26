@@ -74,6 +74,21 @@
         ]
       },
       "id": 5
+    },
+    {
+      "properties": {
+        "message": "Bonjour Bayreuth\ntemps : partiellement nuageux\n et il fait : -3.31  degrés.",
+        "image": "03n"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.594079956699034,
+          49.93519360305157
+        ]
+      },
+      "id": 6
     }
   ]
 }
