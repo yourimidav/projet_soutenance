@@ -92,21 +92,6 @@
     },
     {
       "properties": {
-        "message": "hello Bab El Jazira\ntemps : peu nuageux\n et il fait : 17.85  degrés.",
-        "image": "02d"
-      },
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          10.167430329120236,
-          36.80080674626892
-        ]
-      },
-      "id": 7
-    },
-    {
-      "properties": {
         "message": "hello Tremestieri Etneo\ntemps : peu nuageux\n et il fait : 14.91  degrés.",
         "image": "02d"
       },
@@ -224,6 +209,21 @@
         ]
       },
       "id": 15
+    },
+    {
+      "properties": {
+        "message": "Bonjour Boulogne-Billancourt\ntemps : ciel dégagé\n et il fait : 4.94  degrés.",
+        "image": "01d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.253701928176838,
+          48.85134538738913
+        ]
+      },
+      "id": 16
     }
   ]
 }

@@ -3,7 +3,7 @@
       <!-- Ecriture d'un message à enregistrer avec le marqueur -->
       <input type="text" [(ngModel)]="message" placeholder="your message..." />
     </div>
-    <div class="container">
+    <div class="container"><br>
       <h1>Markers</h1>
       <mat-button-toggle-group
         class="toggle"
@@ -11,8 +11,8 @@
         (value)="(toggleButtonState)"
         (change)="onToggleChange()"
       >
-        <mat-button-toggle value="weather"> weather</mat-button-toggle>
-        <mat-button-toggle value="classical"> classical</mat-button-toggle>
+       <!--  <mat-button-toggle value="weather"> weather</mat-button-toggle>
+        <mat-button-toggle value="classical"> classical</mat-button-toggle> -->
       </mat-button-toggle-group>
     </div>
   

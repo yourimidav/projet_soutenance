@@ -42,6 +42,7 @@ li {
 
 body{
     background: linear-gradient(90deg, rgb(46,139,87), rgb(45,130,183));
+    opacity: 0.9;
     text-align: center;
     color: rgb(255,255,255);
 }
