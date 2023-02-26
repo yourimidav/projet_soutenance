@@ -37,10 +37,11 @@ export class WorldcitiesComponent {
   humidite!: number;
   niveauMer!: number;
   grnd_niveau!: number;
+  dateReleve!: string;
 
   cityForm = new FormGroup ({
     nomVille: new FormControl('', Validators.required),
-    dateReleve: new FormControl('', Validators.required)
+    //dateReleve: new FormControl('', Validators.required)
   });
   
   constructor(
@@ -57,7 +58,8 @@ export class WorldcitiesComponent {
       this.longi = data.coord.lon;
       this.lati = data.coord.lat;
       this.isoName = data.sys.country;
-      //Temperature
+      //temperature
+      this.dateReleve = data.dt;
       this.tempera = data.main.temp;
       this.ressenti = data.main.feels_like;
       this.temperaMin = data.main.temp_min;
@@ -84,7 +86,7 @@ export class WorldcitiesComponent {
 
     const tempEra: Temperature = {
       temp: this.tempera,
-      dateReleve: this.cityForm.value.dateReleve+'',
+      dateReleve: this.dateReleve,
       feelsLike: this.ressenti,
       temperatureMin: this.temperaMin,
       temperatureMax: this.temperaMax,

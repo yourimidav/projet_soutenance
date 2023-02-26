@@ -60,7 +60,7 @@ export class MapBoxComponent {
 
   //Datas for Temperature
   temper!: number;
-  dateReleve!: Date;
+  dateReleve!: string;
   feelsLike!: number;
   temperatureMin!: number;
   temperatureMax!: number;
@@ -279,7 +279,7 @@ export class MapBoxComponent {
     //Temperature
     const newTemp: Temperature ={
       temp: this.temper,
-      dateReleve: '',
+      dateReleve: this.dateReleve,
       feelsLike: this.feelsLike,
       temperatureMin: this.temperatureMin,
       temperatureMax: this.temperatureMax,

@@ -4,6 +4,7 @@
 package com.angular.weather.entities;
 
 import java.time.LocalDateTime;
+import java.util.Date;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
@@ -15,6 +16,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import jakarta.persistence.Temporal;
+import jakarta.persistence.TemporalType;
 
 /**
  * @author f.tiotsop & youri
@@ -32,7 +35,8 @@ public class Temperature {
 	private double temp;
 	
 	@Column(name ="date_releve")
-	private LocalDateTime dateReleve;
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date dateReleve;
 	
 	@Column(name ="feels_like")
 	private double feelsLike;
@@ -60,7 +64,7 @@ public class Temperature {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Temperature(double temp, LocalDateTime dateReleve, double feelsLike, double temperatureMin, double temperatureMax,
+	public Temperature(double temp, Date dateReleve, double feelsLike, double temperatureMin, double temperatureMax,
 			Long pressure, Long humidity, Long sea_level, Long grndLevel, WorldCity ville) {
 		super();
 		this.temp = temp;
@@ -87,11 +91,11 @@ public class Temperature {
 		return temp;
 	}
 
-	public LocalDateTime getDateReleve() {
+	public Date getDateReleve() {
 		return dateReleve;
 	}
 
-	public void setDateReleve(LocalDateTime dateReleve) {
+	public void setDateReleve(Date dateReleve) {
 		this.dateReleve = dateReleve;
 	}
 
