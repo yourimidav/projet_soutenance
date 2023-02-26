@@ -25,6 +25,8 @@ export class TemperaturesComponent {
   countryName!: string;
   normeIso!: string;
 
+  testVille!: string;
+
   //Data pour recuperer le nom du pays
   associatedCountryName = new Intl.DisplayNames(['en'], { type: 'region' });
 
@@ -52,7 +54,7 @@ export class TemperaturesComponent {
 
 
   onSubmit() {
-    this.getCityCoord(this.formulaireTemperature.value.villeForm+'');
+    //this.getCityCoord(this.formulaireTemperature.value.villeForm+'');
     /**
      * this.longitude = data.coord.lon;
       this.latitude = data.coord.lat;
@@ -87,16 +89,17 @@ export class TemperaturesComponent {
     });
   }
 
-  getCityCoord(cityName: string): void {
-    this.weatherService.getWeatherFromCity(cityName).subscribe({next: (data) => {
+  getCityCoord(): void {
+    this.testVille = this.formulaireTemperature.value.villeForm+'';
+    this.weatherService.getWeatherFromCity(this.testVille).subscribe({next: (data) => {
       this.longitude = data.coord.lon;
       this.latitude = data.coord.lat;
       this.normeIso = data.sys.country;
-      this.cityName = cityName;
-      this.cityAscii = cityName;
+      this.cityName = this.testVille;
+      this.cityAscii = this.testVille;
       this.countryName = this.associatedCountryName.of(data.sys.country)+'';
     }, 
-  complete: () => console.log("City crée")});
+  complete: () => this.onSubmit()});
   }
 
   ngOnInit(): void {

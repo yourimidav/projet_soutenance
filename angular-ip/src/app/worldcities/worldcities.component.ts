@@ -161,10 +161,11 @@ export class WorldcitiesComponent {
 
   //DELETE a city
   deleteCity(city: WorldCity): void {
-    this.cities = this.cities.filter((c) => c !== city);
+   this.cities = this.cities.filter((c) => c !== city);
     const id = city.id !== undefined ? city.id : 0;
     city.id = id;
     this.worldCityService.deleteCity(city.id).subscribe();
+    
   }
 
   p: number = 1;

@@ -1,6 +1,5 @@
-<div id="search-component">
-  <label for="search-box">City Search</label>
-  <input #searchBox id="search-box" (input)="search(searchBox.value)"/>
+<div id="search-component" class="box">
+  <input class="input" onmouseout="this.value = ''; this.blur();" #searchBox id="search-box" (input)="search(searchBox.value)"/>
 
   <ul class="search-result">
     <li *ngFor="let city of cities$ | async" >
