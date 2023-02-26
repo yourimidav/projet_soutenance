@@ -314,6 +314,21 @@
         ]
       },
       "id": 22
+    },
+    {
+      "properties": {
+        "message": "Bonjour Sarcelles\ntemps : ciel dégagé\n et il fait : 4.06  degrés.",
+        "image": "01d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3798509895036943,
+          48.995756045982176
+        ]
+      },
+      "id": 23
     }
   ]
 }

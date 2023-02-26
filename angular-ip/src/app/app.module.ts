@@ -18,9 +18,10 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { CitySearchComponent } from './city-search/city-search.component';
 import {NgxPaginationModule} from 'ngx-pagination';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import { MarqueursComponent } from './marqueurs/marqueurs.component';
 
 @NgModule({
-  declarations: [AppComponent, ShowIpComponent, ShowWeatherComponent,  TemperaturesComponent, WorldcitiesComponent, WorldcitiesDetailsComponent, TemperaturesDetaisComponent, MapBoxComponent, CitySearchComponent],
+  declarations: [AppComponent, ShowIpComponent, ShowWeatherComponent,  TemperaturesComponent, WorldcitiesComponent, WorldcitiesDetailsComponent, TemperaturesDetaisComponent, MapBoxComponent, CitySearchComponent, MarqueursComponent],
   imports: [BrowserModule, HttpClientModule, FormsModule, AppRoutingModule,ReactiveFormsModule,MatButtonToggleModule, BrowserAnimationsModule,NgxPaginationModule,MatPaginatorModule],
   providers: [],
   bootstrap: [AppComponent],

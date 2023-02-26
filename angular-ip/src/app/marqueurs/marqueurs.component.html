@@ -1,0 +1,43 @@
+<p>All saved Markers in you data bases</p>
+<div class="table-wrapper">
+    <table class="fl-table">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>Country</th>
+                <th>City</th>
+                <th>Type</th>
+                <th>Message</th>
+                <th>Image</th>
+                <th>Type Geo</th>
+                <th>Coordinates (Lat & long)</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let merker  of allMarqueurs | paginate: { itemsPerPage: 10, currentPage: p }">
+            <tr>
+                <td>
+                     <!--<a routerLink="/cityDetail/{{ city.id }}">
+                     {{ city.id }}
+                     </a>-->
+                     {{ merker.id }}
+                 </td>
+                 <td>{{ merker.ville?.countryName }}</td>
+                 <td>{{ merker.ville?.cityName }}</td>
+                 <td>{{ merker.type }}</td>
+                 <td>{{ merker.message }} </td>
+                 <td>{{ merker.image }} </td>
+                 <td>{{ merker.typegeo }}</td>
+                 <td>{{ merker.coordinates }}</td>
+                 <td>
+                     <button type="button" class="delete outer" title="Delete Marker"
+                         (click)="deleteMerker(merker)"> 
+                         <div class="inner">
+                             <label class="labeldelete">Delete   </label>
+                         </div>
+                     </button>
+                  </td>
+        </tbody>
+    </table>
+</div>
+<pagination-controls (pageChange)="p = $event" class="float-right"></pagination-controls>

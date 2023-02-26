@@ -21,4 +21,6 @@ export class WeatherService {
       `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&lang=fr&units=metric&appid=${this.API_KEY}`
     );
   }
+
+  //https://api.openweathermap.org/data/2.5/weather?lat=47,4167&lon=0,6667&lang=fr&units=metric&appid=8118ed6ee68db2debfaaa5a44c832918`
 }

@@ -6,13 +6,15 @@ import { WorldcitiesDetailsComponent } from './worldcities-details/worldcities-d
 import { TemperaturesComponent } from './temperature/temperatures.component';
 import { TemperaturesDetaisComponent } from './temperatures-detais/temperatures-detais.component';
 import { MapBoxComponent } from './map-box/map-box.component';
+import { MarqueursComponent } from './marqueurs/marqueurs.component';
 
 const routes: Routes = [
   { path: 'worldCities', component: WorldcitiesComponent},
   { path: 'cityDetail/:id', component: WorldcitiesDetailsComponent},
-  {path:'temperatures',component:TemperaturesComponent},
-  {path: 'tempDetail/:id',component:TemperaturesDetaisComponent},
-  {path: 'map',component:MapBoxComponent}
+  { path: 'temperatures',component:TemperaturesComponent},
+  { path: 'tempDetail/:id',component:TemperaturesDetaisComponent},
+  { path: 'marqueurs', component: MarqueursComponent},
+  { path: 'map',component:MapBoxComponent}
 ];
 
 @NgModule({
