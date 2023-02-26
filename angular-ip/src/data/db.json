@@ -2,51 +2,6 @@
   "markers": [
     {
       "properties": {
-        "message": "Bonjour Chartres\ntemps : ciel dégagé\n et il fait : 0.16  degrés.",
-        "image": "01n"
-      },
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          1.4760065487358816,
-          48.443368249050394
-        ]
-      },
-      "id": 1
-    },
-    {
-      "properties": {
-        "message": "Bonjour Mortagne-au-Perche\ntemps : ciel dégagé\n et il fait : -0.45  degrés.",
-        "image": "01n"
-      },
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          0.5444692401139832,
-          48.51866082876515
-        ]
-      },
-      "id": 2
-    },
-    {
-      "properties": {
-        "message": "Bonjour Feucherolles\ntemps : ciel dégagé\n et il fait : 0.89  degrés.",
-        "image": "01n"
-      },
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          1.9728449842349107,
-          48.872307399830646
-        ]
-      },
-      "id": 3
-    },
-    {
-      "properties": {
         "message": "Bonjour Provins\ntemps : ciel dégagé\n et il fait : 0.25  degrés.",
         "image": "01n"
       },
@@ -89,6 +44,36 @@
         ]
       },
       "id": 6
+    },
+    {
+      "properties": {
+        "message": "Bonjour Vnukovo District\ntemps : nuageux\n et il fait : 1.98  degrés.",
+        "image": "04d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          37.22751923448732,
+          55.63108319512054
+        ]
+      },
+      "id": 7
+    },
+    {
+      "properties": {
+        "message": "Bonjour Clermont-Ferrand\ntemps : peu nuageux\n et il fait : 2.66  degrés.",
+        "image": "02d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.0821916698133123,
+          45.778441782072576
+        ]
+      },
+      "id": 8
     }
   ]
 }

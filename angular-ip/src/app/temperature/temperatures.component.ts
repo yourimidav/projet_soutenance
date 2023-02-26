@@ -52,7 +52,7 @@ export class TemperaturesComponent {
 
 
   onSubmit() {
-    this.getWeatherCoord(this.formulaireTemperature.value.villeForm+'');
+    this.getCityCoord(this.formulaireTemperature.value.villeForm+'');
     /**
      * this.longitude = data.coord.lon;
       this.latitude = data.coord.lat;
@@ -87,7 +87,7 @@ export class TemperaturesComponent {
     });
   }
 
-  getWeatherCoord(cityName: string): void {
+  getCityCoord(cityName: string): void {
     this.weatherService.getWeatherFromCity(cityName).subscribe({next: (data) => {
       this.longitude = data.coord.lon;
       this.latitude = data.coord.lat;
