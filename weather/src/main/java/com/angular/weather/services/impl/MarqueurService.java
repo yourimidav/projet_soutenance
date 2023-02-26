@@ -1,6 +1,7 @@
 package com.angular.weather.services.impl;
 
 import com.angular.weather.entities.Marqueur;
+import com.angular.weather.entities.WorldCity;
 import com.angular.weather.repositories.MarkersRepository;
 import com.angular.weather.services.MarkersServiceInterface;
 import org.springframework.stereotype.Service;
@@ -40,4 +41,10 @@ public class MarqueurService implements MarkersServiceInterface {
     public Marqueur updateMarqueur(Marqueur marqueur) {
         return addMarqueur(marqueur);
     }
+
+	@Override
+	public List<Marqueur> findMargeurByVille(WorldCity city) {
+		// TODO Auto-generated method stub
+		return markersRepository.findByVille(city);
+	}
 }

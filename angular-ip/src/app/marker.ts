@@ -1,3 +1,5 @@
+import { WorldCity } from "./worldCity";
+
 export interface Markers {
     id?: number;
     type: string;
@@ -5,4 +7,5 @@ export interface Markers {
     image:string;
     typegeo:string;
     coordinates:number[];
+    ville?: WorldCity;
 }

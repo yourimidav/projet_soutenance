@@ -1,6 +1,8 @@
 package com.angular.weather.services;
 
 import com.angular.weather.entities.Marqueur;
+import com.angular.weather.entities.WorldCity;
+
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -18,5 +20,7 @@ public interface MarkersServiceInterface {
     public void deleteMarqueurById(Long id);
 
     public Marqueur updateMarqueur(Marqueur marqueur);
+    
+    public List<Marqueur> findMargeurByVille(WorldCity city);
 
 }

@@ -7,6 +7,11 @@ import { FeatureCollection } from 'geojson';
 import { WeatherService } from '../weather.service';
 import { MarkersService } from '../markers.service';
 import { Markers } from '../marker';
+import * as mapboxgl from 'mapbox-gl';
+import { WorldcitiesService } from '../worldcities.service';
+import { WorldCity } from '../worldCity';
+import { Temperature } from '../temperature';
+import { TemperatureService } from '../temperature.service';
 //import { MatButtonToggleGroup } from '@angular/material/button-toggle';
 
 @Component({
@@ -14,6 +19,7 @@ import { Markers } from '../marker';
   templateUrl: './map-box.component.html',
   styleUrls: ['./map-box.component.css'],
 })
+
 export class MapBoxComponent {
   map!: Map; // la carte
   style: string = 'mapbox://styles/mapbox/light-v11'; // style de la carte
@@ -28,14 +34,52 @@ export class MapBoxComponent {
   sourceId: string = 'weather'; // nom par défaut de la source de données
   layerId: string = 'weather-layer'; // nom par défaut du layer
 
+  //Datas for a Marker
   marker1!:Markers;
   type1!: string;
   message1!: string;
   image1!:string;
   typegeo1!:string;
   coordinates1!:number[];
+
   nomville!:string;
   temp!:string;
+
+  cities: WorldCity[] = [];
+  //city!: WorldCity;
+  temperatures:Temperature[]=[];
+  makers: Markers[]=[];
+
+  //Data for a City
+  cityName!: string;
+  cityAscii!: string;
+  latitude!: number;
+  longitude!: number;
+  normeIso!: string;
+  countryName!: string;
+
+  //Datas for Temperature
+  temper!: number;
+  dateReleve!: Date;
+  feelsLike!: number;
+  temperatureMin!: number;
+  temperatureMax!: number;
+  pressure!: number;
+  humidity!: number;
+  sea_level!: number;
+  grndLevel!: number;
+
+  city!: WorldCity;
+  marqueur!: Markers;
+  markerGeoJson!: CustomGeoJson;
+
+  //Data pour recuperer le nom du pays
+  associatedCountryName = new Intl.DisplayNames(['en'], { type: 'region' });
+
+  //mapboxgl!: MapboxG;
+
+  //mapboxgl.accessToken = 'You access token ';
+
 
   // état initial du bouton
   toggleButtonState: string = 'weather';
@@ -51,7 +95,13 @@ export class MapBoxComponent {
     'yellow',
   ];
 
-  constructor(private weatherService: WeatherService,private mapService: MapService,private markerService:MarkersService) {}
+  constructor(
+    private weatherService: WeatherService,
+    private mapService: MapService,
+    private markerService: MarkersService,
+    private worldCitiesService: WorldcitiesService,
+    private temperatureService: TemperatureService
+    ) {}
 
   ngOnInit() {
     // zoom sur la localisation de l'utilisateur
@@ -71,6 +121,9 @@ export class MapBoxComponent {
     const random_number = Math.floor(Math.random() * this.colors.length);
     this.iconId = this.colors[random_number];
   }
+
+  //mapboxgl.accessToken 
+  
 
   loadMarkers(): void {
     // Appel du service pour faire une requête HTTP
@@ -129,19 +182,62 @@ export class MapBoxComponent {
          const test =new CustomGeoJson(coordinates, {
           message: this.weatherService.getWeatherFromcoord(coordinates[1],coordinates[0]).subscribe((data) => {
             this.type1="Feature";
+                //this.marqueur.type = "Feature";
             this.message1=data.weather[0].description;
+                //this.marqueur.message = data.weather[0].description;
             this.image1=data.weather[0].icon;
+                //this.marqueur.image = data.weather[0].icon;
             this.typegeo1="Point";
+
             this.coordinates1=[coordinates[1],coordinates[0]];
             this.nomville=data.name;
             this.temp=data.main.temp;
+
+                //this.marqueur.typegeo = "Point";
+            this.coordinates1=[coordinates[1],coordinates[0]];
+                //this.marqueur.coordinates = [coordinates[1], coordinates[0]];
+                this.cityName = data.name;
+                this.cityAscii = data.name;
+                this.latitude = data.coord.lat;
+                this.longitude = data.coord.lon;
+                this.normeIso = data.sys.country;
+                //this.countryName = this.associatedCountryName.of(data.sys.countrye)+'';
+                this.temper = data.main.temp;
+                this.dateReleve = data.dt;
+                this.feelsLike =  data.main.feels_like;
+                this.temperatureMin =  data.main.temp_min;
+                this.temperatureMax =  data.main.temp_max;
+                this.pressure =  data.main.pressure;
+                this.humidity =  data.main.humidity;
+                this.sea_level =  data.main.sea_level;
+                this.grndLevel =  data.main.grnd_level;
+            /*const cityAlias: WorldCity= {
+              cityName: this.cityName ,
+              cityAscii: this.cityAscii,
+              latitude: this.latitude,
+              longitude: this.longitude,
+              countryName: this.countryName,
+              normeIso: this.normeIso
+            }*/
+            
+
             const newmarker: Markers={
               type: "Feature",
               message: this.message1,
               image: this.image1,
               typegeo: this.typegeo1,
-              coordinates:this.coordinates1
+              coordinates:this.coordinates1,
+              //ville: cityAlias
+              //this.marqueur.ville!.cityName = this.cityName;
+                //this.marqueur.ville!.cityAscii = this.cityAscii;
+                //this.marqueur.ville!.latitude = this.latitude;
+                //this.marqueur.ville!.longitude = this.longitude;
+                //this.marqueur.ville!.normeIso = this.normeIso;
+                //this.marqueur.ville!.countryName = this.countryName;
             };  
+            //Add en BDD
+            //this.addMarqueurEnBDD(this.marqueur);
+            
             this.markerService.addMarker(newmarker);
             this.iconId=this.image1;
             // création d'un nouveau marqueur
@@ -156,15 +252,80 @@ export class MapBoxComponent {
               this.loadImage();
               // Ajout du marqueur sur la carte
               this.setMarkers();
+              //complete: () => this.saveDataToDataBase()
+              this.saveDataToDataBase();
             });
             } 
             
       ),
-        });
+      });
         
         
       });
     });
+    
+  }
+
+  saveDataToDataBase(): void{
+    //City
+    const maVille: WorldCity= {
+      cityName: this.cityName,
+      cityAscii: this.cityAscii,
+      latitude: this.latitude,
+      longitude: this.longitude,
+      countryName: this.associatedCountryName.of(this.normeIso )+'',
+      normeIso: this.normeIso 
+    }
+    //Temperature
+    const newTemp: Temperature ={
+      temp: this.temper,
+      dateReleve: '',
+      feelsLike: this.feelsLike,
+      temperatureMin: this.temperatureMin,
+      temperatureMax: this.temperatureMax,
+      pressure: this.pressure,
+      humidity: this.humidity ,
+      sea_level: this.sea_level ,
+      grndLevel: this.grndLevel,
+      ville: maVille
+    }
+
+    //Markers
+    /**
+     * type: "Feature",
+              message: this.message1,
+              image: this.image1,
+              typegeo: this.typegeo1,
+              coordinates:this.coordinates1,
+     */
+    const newMark: Markers = {
+      type: "Feature",
+      message: this.message1,
+      image: this.image1,
+      typegeo: this.typegeo1,
+      coordinates: this.coordinates1,
+      ville: maVille
+    }
+    this.addTemperature(newTemp);
+    //console.log("Date: "+this.dateReleve.toISOString());
+    this.addMarker(newMark);
+  }
+
+  //PUT a temperature
+  addTemperature(newTemperature: Temperature): void{
+    //this.nom =  newTemperature.ville?.cityName+'';
+    if (!newTemperature) return;
+    this.temperatureService.addTemperature(newTemperature).subscribe(
+    );
+    
+  }
+
+  //PUT a temperature
+  addMarker(newMarker: Markers): void{
+    //this.nom =  newTemperature.ville?.cityName+'';
+    if (!newMarker) return;
+    this.markerService.addMarker(newMarker).subscribe(
+    );
   }
 
   createLayer() {
@@ -222,6 +383,13 @@ export class MapBoxComponent {
       },
     });
     */
+  }
+
+  addMarqueurEnBDD(newMark: Markers): void{
+    if (!newMark) return;
+    this.markerService.addMarker(newMark).subscribe((marker) => {
+      this.markers.push(this.markerGeoJson);
+    });
   }
 
   loadImage() {

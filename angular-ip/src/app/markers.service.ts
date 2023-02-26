@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { catchError, Observable, of, tap } from 'rxjs';
 import { Markers } from './marker';
 import { MessageService } from './message.service';
+import { WorldCity } from './worldCity';
 
 @Injectable({
   providedIn: 'root'
@@ -32,6 +33,14 @@ export class MarkersService {
     getAllMarkers(): Observable<Markers[]>{
       return this.http.get<Markers[]>(this.markersUrl).pipe(
         tap((_) => this.logMessage('markers fetched')),
+        catchError(this.handleError<Markers[]>('getAllMarkers', []))
+      );
+    }
+
+    getAllMarkersForCity(city: WorldCity): Observable<Markers[]>{
+      const url = `${this.markersUrl+"/all/"}/${city}`;
+      return this.http.get<Markers[]>(url).pipe(
+        tap((_) => this.logMessage('All merkers fetched by city= '+city)),
         catchError(this.handleError<Markers[]>('getAllMarkers', []))
       );
     }

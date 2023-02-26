@@ -1,3 +1,49 @@
 {
-  "markers": []
+  "markers": [
+    {
+      "properties": {
+        "message": "Bonjour Chartres\ntemps : ciel dégagé\n et il fait : 0.16  degrés.",
+        "image": "01n"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.4760065487358816,
+          48.443368249050394
+        ]
+      },
+      "id": 1
+    },
+    {
+      "properties": {
+        "message": "Bonjour Mortagne-au-Perche\ntemps : ciel dégagé\n et il fait : -0.45  degrés.",
+        "image": "01n"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5444692401139832,
+          48.51866082876515
+        ]
+      },
+      "id": 2
+    },
+    {
+      "properties": {
+        "message": "Bonjour Feucherolles\ntemps : ciel dégagé\n et il fait : 0.89  degrés.",
+        "image": "01n"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.9728449842349107,
+          48.872307399830646
+        ]
+      },
+      "id": 3
+    }
+  ]
 }

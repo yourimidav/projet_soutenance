@@ -1,6 +1,7 @@
 package com.angular.weather.controllers;
 
 import com.angular.weather.entities.Marqueur;
+import com.angular.weather.entities.WorldCity;
 import com.angular.weather.services.MarkersServiceInterface;
 import org.springframework.web.bind.annotation.*;
 
@@ -41,6 +42,11 @@ public class MarqueurController {
     @PostMapping("/les")
     public Marqueur add(@RequestBody Marqueur marqueur){
         return markersServiceInterface.addMarqueur(marqueur);
+    }
+    
+    @GetMapping("/les/all")
+    public List<Marqueur> getMarqueurByVille(WorldCity city){
+    	return markersServiceInterface.findMargeurByVille(city);
     }
 
 }

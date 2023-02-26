@@ -4,6 +4,8 @@ import { TemperatureService } from '../temperature.service';
 import { Temperature } from '../temperature';
 import { FormGroup,FormControl } from '@angular/forms';
 import { WeatherService } from '../weather.service';
+import { WorldCity } from '../worldCity';
+import { WorldcitiesService } from '../worldcities.service';
 
 @Component({
   selector: 'app-temperatures',
@@ -13,12 +15,13 @@ import { WeatherService } from '../weather.service';
 export class TemperaturesComponent {
 
   temperatures:Temperature[]=[];
+  city!: WorldCity;
 
   //Pour gestion pagination
   p: number = 1;
   
   formulaireTemperature = new FormGroup({
-    ville: new FormControl(''),
+    villeForm: new FormControl(''),
     tempForm: new FormControl(''),
     feelsLikeForm: new FormControl(''),
     temperatureMinForm: new FormControl(''),
@@ -32,7 +35,8 @@ export class TemperaturesComponent {
 
   constructor(
     private temperatureService:TemperatureService,
-    private weatherService: WeatherService
+    private weatherService: WeatherService,
+    private worldCitiesService: WorldcitiesService,
   ){};
 
 
@@ -46,8 +50,8 @@ export class TemperaturesComponent {
       pressure: parseFloat(this.formulaireTemperature.value.pressureForm ?? '0'),
       humidity: parseFloat(this.formulaireTemperature.value.humidityForm ?? '0'),
       sea_level: parseFloat(this.formulaireTemperature.value.sea_levelForm ?? '0'),
-      grndLevel: parseFloat(this.formulaireTemperature.value.grnd_levelForm ?? '0')
-      //ville: null;
+      grndLevel: parseFloat(this.formulaireTemperature.value.grnd_levelForm ?? '0'),
+      //ville: this.worldCitiesService.getCityByName(this.formulaireTemperature.value.villeForm+'').subscribe(((city) => (this.city = city)))
     };
     this.temperatureService.addTemperature(newTemperature).subscribe((temperature) => {
       this.temperatures.push(temperature);
