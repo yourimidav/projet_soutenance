@@ -224,6 +224,96 @@
         ]
       },
       "id": 16
+    },
+    {
+      "properties": {
+        "message": "Bonjour Paris 14\ntemps : ciel dégagé\n et il fait : 4.85  degrés.",
+        "image": "01d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.327152856624167,
+          48.827734190657736
+        ]
+      },
+      "id": 17
+    },
+    {
+      "properties": {
+        "message": "Bonjour Rambouillet\ntemps : peu nuageux\n et il fait : 3.95  degrés.",
+        "image": "02d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.8226710158406831,
+          48.64216106050117
+        ]
+      },
+      "id": 18
+    },
+    {
+      "properties": {
+        "message": "Bonjour Barry\ntemps : partiellement nuageux\n et il fait : 7.92  degrés.",
+        "image": "03d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.28389112345414,
+          51.383731562358776
+        ]
+      },
+      "id": 19
+    },
+    {
+      "properties": {
+        "message": "Bonjour Belgard\ntemps : nuageux\n et il fait : 6.82  degrés.",
+        "image": "04d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.395548378814766,
+          53.31030002064233
+        ]
+      },
+      "id": 20
+    },
+    {
+      "properties": {
+        "message": "Bonjour Rivas-Vaciamadrid\ntemps : ciel dégagé\n et il fait : 10.14  degrés.",
+        "image": "01d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.555927934059099,
+          40.350172062983546
+        ]
+      },
+      "id": 21
+    },
+    {
+      "properties": {
+        "message": "Bonjour Bnei Ayish\ntemps : ciel dégagé\n et il fait : 16.82  degrés.",
+        "image": "01n"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.79956783911692,
+          31.757096619059965
+        ]
+      },
+      "id": 22
     }
   ]
 }

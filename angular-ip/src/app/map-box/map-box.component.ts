@@ -12,6 +12,7 @@ import { WorldcitiesService } from '../worldcities.service';
 import { WorldCity } from '../worldCity';
 import { Temperature } from '../temperature';
 import { TemperatureService } from '../temperature.service';
+import { Location } from '@angular/common';
 //import { MatButtonToggleGroup } from '@angular/material/button-toggle';
 
 @Component({
@@ -100,7 +101,8 @@ export class MapBoxComponent {
     private mapService: MapService,
     private markerService: MarkersService,
     private worldCitiesService: WorldcitiesService,
-    private temperatureService: TemperatureService
+    private temperatureService: TemperatureService,
+    private location: Location,
     ) {}
 
   ngOnInit() {
@@ -429,5 +431,9 @@ export class MapBoxComponent {
     this.map.flyTo({
       center: data.geometry.coordinates,
     });
+  }
+
+  goBack(): void {
+    this.location.back();
   }
 }

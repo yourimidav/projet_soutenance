@@ -1,7 +1,8 @@
-<div id="search-component" class="box">
-  <input class="input" onmouseout="this.value = ''; this.blur();" #searchBox id="search-box" (input)="search(searchBox.value)"/>
+<div class="box">
+  <input type="search" class="input" placeholder="" onmouseout="this.value = ''; this.blur();" #searchBox id="search-box" (input)="search(searchBox.value)"/>
 
   <ul class="search-result">
+    <span>Result of your search:</span>
     <li *ngFor="let city of cities$ | async" >
       <a routerLink="/cityDetail/{{ city.id }}">
         <span class="badge">{{ city.id }}</span> {{city.cityName}} ({{ city.normeIso }})
