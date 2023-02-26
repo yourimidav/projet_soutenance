@@ -14,6 +14,6 @@ public interface TemperatureRepository extends JpaRepository<Temperature,Long> {
     
 	List<Temperature> findByVille(WorldCity ville);
 	
-	@Query("SELECT t FROM Temperature t WHERE t.ville = :ville_id")
+	@Query("SELECT t FROM Temperature t WHERE t.ville.id = :ville_id")
 	List<Temperature> findByVilleId(@Param("ville_id") Long ville_id);
 }

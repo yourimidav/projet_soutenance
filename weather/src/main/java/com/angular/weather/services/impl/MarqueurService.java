@@ -43,8 +43,13 @@ public class MarqueurService implements MarkersServiceInterface {
     }
 
 	@Override
-	public List<Marqueur> findMargeurByVille(WorldCity city) {
+	public List<Marqueur> findMarqueurByVille(WorldCity city) {
 		// TODO Auto-generated method stub
 		return markersRepository.findByVille(city);
 	}
+
+    @Override
+    public List<Marqueur> findAllMarqueurByVilleId(Long id) {
+        return markersRepository.findByVilleId(id);
+    }
 }

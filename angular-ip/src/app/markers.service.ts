@@ -38,13 +38,21 @@ export class MarkersService {
     }
 
     getAllMarkersForCity(city: WorldCity): Observable<Markers[]>{
-      const url = `${this.markersUrl+"/all/"}/${city}`;
+      const url = `${this.markersUrl+"/all"}/${city}`;
       return this.http.get<Markers[]>(url).pipe(
         tap((_) => this.logMessage('All merkers fetched by city= '+city)),
         catchError(this.handleError<Markers[]>('getAllMarkers', []))
       );
     }
 
+    getAllMarkersForCityById(id:number): Observable<Markers[]>{
+      const url = `${this.markersUrl+"/autres"}/${id}`;
+      console.log("normalement ca les a eu");
+      return this.http.get<Markers[]>(url).pipe(
+        tap((_) => this.logMessage('All merkers fetched by city= '+id)),
+        catchError(this.handleError<Markers[]>('getAllMarkers', []))
+      );
+    }
 
     getMarkerById(id: number): Observable<Markers> {
       const url = `${this.markersUrl}/${id}`;

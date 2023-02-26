@@ -46,7 +46,12 @@ public class MarqueurController {
     
     @GetMapping("/les/all")
     public List<Marqueur> getMarqueurByVille(WorldCity city){
-    	return markersServiceInterface.findMargeurByVille(city);
+    	return markersServiceInterface.findMarqueurByVille(city);
     }
 
+    @GetMapping("/les/autres/{id}")
+    public List<Marqueur> getMarqueurByVilleId(@PathVariable Long id){
+        System.out.println("test");
+        return markersServiceInterface.findAllMarqueurByVilleId(id);
+    }
 }

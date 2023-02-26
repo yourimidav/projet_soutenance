@@ -6,6 +6,8 @@ import { WeatherService } from '../weather.service';
 import { WorldcitiesService } from '../worldcities.service';
 import { WorldCity } from '../worldCity';
 import { Observable,of } from 'rxjs';
+import { TemperaturesComponent } from '../temperature/temperatures.component';
+import { MarkersService } from '../markers.service';
 //import {NgxPaginationModule} from 'ngx-pagination';
 
 @Component({
@@ -14,6 +16,7 @@ import { Observable,of } from 'rxjs';
   styleUrls: ['./worldcities.component.css']
 })
 export class WorldcitiesComponent {
+  temperaturec!:TemperaturesComponent;
 
   cities: WorldCity[] = [];
   city!: WorldCity;
@@ -47,7 +50,8 @@ export class WorldcitiesComponent {
   constructor(
     private worldCityService: WorldcitiesService,
     private weatherService: WeatherService,
-    private temperatureService: TemperatureService) {}
+    private temperatureService: TemperatureService,
+    private markersService:MarkersService) {}
 
   ngOnInit(): void{
     this.getCities();
@@ -164,26 +168,41 @@ export class WorldcitiesComponent {
    this.cities = this.cities.filter((c) => c !== city);
     const id = city.id !== undefined ? city.id : 0;
     city.id = id;
-    this.worldCityService.deleteCity(city.id).subscribe();
-    
-
+    this.worldCityService.deleteCityAll(city.id).subscribe();
     /* this.cities = this.cities.filter((c) => c !== city);
     const id = city.id !== undefined ? city.id : 0;
     city.id = id;
-    this.worldCityService.deleteCity(city.id).subscribe(); */
-    /* this.cities = this.cities.filter((c) => c !== city);
-    const id = city.id !== undefined ? city.id : 0;
-    city.id = id;
-    this.temperatureService.getByVille(city).subscribe((data) => {
+    this.temperatureService.getByVille(id).subscribe((data) => {
       data.forEach((datau) => {
-        if(datau.id)this.temperatureService.deleteTemperature(datau.id);
-      })
+        if(datau.id){
+          this.temperatureService.deleteTemperature(datau.id);
+        }
+      });
+      error: err =>console.log( err),
+     () => {
+      this.markersService.getAllMarkersForCityById(id).subscribe((data1)=>{
+        data1.forEach((datau1) => {
+          if(datau1.id){
+            this.markersService.deleteMarker(datau1.id);
+          }
+        })
       
-    this.worldCityService.deleteCity(id).subscribe(() => {
-      console.log('La ville a été supprimée avec succès.');
-    });}); */
+    },() => {
+      this.worldCityService.deleteCity(id).subscribe(() => {
+        console.log('La ville a été supprimée avec succès.');
+      })})
+    })
+      
+ */
   }
 
   p: number = 1;
 
 }
+/* this.markersService.getAllMarkersForCityById(id).subscribe((data1)=>{
+        data1.forEach((datau1) => {
+          if(datau1.id){
+            this.markersService.deleteMarker(datau1.id);
+          }
+        })
+      }) */

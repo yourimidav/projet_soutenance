@@ -114,6 +114,14 @@ export class WorldcitiesService {
     );
   }
 
+  deleteCityAll(id: number): Observable<WorldCity> {
+    const url = `${this.worldCitiesUrl}/autres/${id}`;
+    return this.http.delete<WorldCity>(url, this.httpOptions).pipe(
+      tap((_) => this.logMessage(`City designated by id=${id}) deleted`)),
+      catchError(this.handleError<WorldCity>('deleteCity'))
+    );
+  }
+
   /* GET cities whose name contains search term */
 searchCities(term: string): Observable<WorldCity[]> {
   if (!term.trim()) {

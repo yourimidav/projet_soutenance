@@ -65,10 +65,11 @@ getAllTemperaturesForWille(id: number): Observable<Temperature[]> {
     );
   }
 
-  getByVille(ville: WorldCity): Observable<Temperature[]> {
-    const url = `"${this.temperatureUrl}"/${ville}`;
+  getByVille(id:number): Observable<Temperature[]> {
+    const url = `${this.temperatureUrl}/ville/${id}`;
+    console.log(this.http.get<Temperature[]>(url))
     return this.http.get<Temperature[]>(url).pipe(
-      tap((_) => this.log(`fetched temperature id=${ville}`)),
+      tap((_) => this.log(`fetched temperature id=${id}`)),
       catchError(this.handleError<Temperature[]>('getTemperatures', []))
     );
   }
@@ -92,7 +93,6 @@ getAllTemperaturesForWille(id: number): Observable<Temperature[]> {
   /** DELETE: delete the temperature from the server */
   deleteTemperature(id: number): Observable<Temperature> {
     const url = `${this.temperatureUrl}/${id}`;
-
     return this.http.delete<Temperature>(url, this.httpOptions).pipe(
       tap((_) => this.log(`deleted temperature id=${id}`)),
       catchError(this.handleError<Temperature>('deleteTemperature'))

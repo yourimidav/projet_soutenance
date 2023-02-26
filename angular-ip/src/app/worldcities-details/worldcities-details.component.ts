@@ -46,7 +46,7 @@ export class WorldcitiesDetailsComponent {
     // TODO
     //const id: number = Number(this.route.snapshot.paramMap.get('id'));
     //this.worldCitiesService.getCityById(id).subscribe((city) => (this.city = city));
-    this.temperatureService.getByVille(city).subscribe({
+    this.temperatureService.getByVille(city.id ?? 0).subscribe({
       next: (temperaturesFromObservable) => {
         this.temperatures = temperaturesFromObservable;
         console.log('Retrieved temperatures data :', temperaturesFromObservable);

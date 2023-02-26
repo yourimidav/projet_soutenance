@@ -1,6 +1,7 @@
 package com.angular.weather.services;
 
 import com.angular.weather.entities.Marqueur;
+import com.angular.weather.entities.Temperature;
 import com.angular.weather.entities.WorldCity;
 
 import org.springframework.stereotype.Service;
@@ -21,6 +22,8 @@ public interface MarkersServiceInterface {
 
     public Marqueur updateMarqueur(Marqueur marqueur);
     
-    public List<Marqueur> findMargeurByVille(WorldCity city);
+    public List<Marqueur> findMarqueurByVille(WorldCity city);
+
+    public List<Marqueur> findAllMarqueurByVilleId(Long id);
 
 }

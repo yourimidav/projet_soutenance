@@ -31,7 +31,7 @@ public class TemperatureController {
         return temperatureServiceInterface.findTemperatureById(id);
     }
 
-    @GetMapping("/ville")
+    @GetMapping("/erature/ville")
     public List<Temperature> getByVille( WorldCity ville){
         System.out.println("fetched all temp by ville");
         return temperatureServiceInterface.getByVille(ville);

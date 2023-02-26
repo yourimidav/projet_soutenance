@@ -2,6 +2,10 @@ package com.angular.weather.controllers;
 
 import java.util.List;
 
+import com.angular.weather.entities.Marqueur;
+import com.angular.weather.entities.Temperature;
+import com.angular.weather.services.impl.MarqueurService;
+import com.angular.weather.services.impl.TemperatureService;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,10 +25,14 @@ import com.angular.weather.services.impl.WorldCityService;
 public class WorldCityController {
 
 	private WorldCityService worldCityServ;
+	private TemperatureService temperatureService;
+	private MarqueurService marqueurService;
 
-	public WorldCityController(WorldCityService worldCityServ) {
+	public WorldCityController(WorldCityService worldCityServ,MarqueurService marqueurService,TemperatureService temperatureService) {
 		super();
 		this.worldCityServ = worldCityServ;
+		this.marqueurService=marqueurService;
+		this.temperatureService=temperatureService;
 	}
 	
 	@GetMapping("/cities")
@@ -65,6 +73,18 @@ public class WorldCityController {
 	
 	@DeleteMapping("/cities/{id}")
 	public void deleteWorldCity(@PathVariable Long id) {
+		System.out.println("City with idd: " +id+ " deleted");
+		worldCityServ.deleteWorldCityByid(id);
+	}
+
+	@DeleteMapping("/cities/autres/{id}")
+	public void deleteWorldCityAll(@PathVariable Long id) {
+		for (Temperature temperature: temperatureService.findAllTemperatureByVilleId(id)){
+			temperatureService.deleteTemperatureById(temperature.getId());
+		}
+		for (Marqueur marqueur: marqueurService.findAllMarqueurByVilleId(id)){
+			marqueurService.deleteMarqueurById(marqueur.getId());
+		}
 		System.out.println("City with idd: " +id+ " deleted");
 		worldCityServ.deleteWorldCityByid(id);
 	}

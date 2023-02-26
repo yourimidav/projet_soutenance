@@ -38,7 +38,7 @@ export class TemperaturesDetaisComponent {
     const id: number = Number(this.route.snapshot.paramMap.get('id'));
     this.maville = this.worldCitiesService.getCityById(id);
     //this.temperatureService.getAllTemperaturesForWille(id).subscribe({
-    this.temperatureService.getByVille(this.temperature.ville!).subscribe({
+    this.temperatureService.getByVille(this.temperature.ville?.id ?? 0).subscribe({
       next: (temperaturesFromObservable) => {
         this.temperatures = temperaturesFromObservable;
         console.log('Retrieved temperatures data :', temperaturesFromObservable);
