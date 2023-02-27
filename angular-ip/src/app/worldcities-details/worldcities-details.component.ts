@@ -90,7 +90,7 @@ export class WorldcitiesDetailsComponent {
     this.marqueurs = this.marqueurs.filter((m) => m !== mark);
     const id = mark.id !== undefined ? mark.id : 0;
     mark.id = id;
-    this.temperatureService.deleteTemperature(mark.id).subscribe();
+    this.markersService.deleteMarker(mark.id).subscribe();
   }
 
   saveCity(): void {
