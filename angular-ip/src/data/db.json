@@ -329,6 +329,201 @@
         ]
       },
       "id": 23
+    },
+    {
+      "properties": {
+        "message": "Bonjour Franconville\ntemps : ciel dégagé\n et il fait : 3.04  degrés.",
+        "image": "01n"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.242350703457163,
+          48.98849278564657
+        ]
+      },
+      "id": 24
+    },
+    {
+      "properties": {
+        "message": "Bonjour Fosses\ntemps : ciel dégagé\n et il fait : 2.8  degrés.",
+        "image": "01n"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.508132005545008,
+          49.09778984199883
+        ]
+      },
+      "id": 25
+    },
+    {
+      "properties": {
+        "message": "Bonjour Neuilly-sur-Seine\ntemps : ciel dégagé\n et il fait : 2.14  degrés.",
+        "image": "01n"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2693810600109714,
+          48.884404144802545
+        ]
+      },
+      "id": 26
+    },
+    {
+      "properties": {
+        "message": "Bonjour Le Pré-Saint-Gervais\ntemps : ciel dégagé\n et il fait : 1.9  degrés.",
+        "image": "01n"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.4029681857321634,
+          48.88331614780222
+        ]
+      },
+      "id": 27
+    },
+    {
+      "properties": {
+        "message": "Bonjour Romainville\ntemps : ciel dégagé\n et il fait : 1.58  degrés.",
+        "image": "01n"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.4161861117577246,
+          48.87942151187971
+        ]
+      },
+      "id": 28
+    },
+    {
+      "properties": {
+        "message": "Bonjour Romainville\ntemps : ciel dégagé\n et il fait : 1.55  degrés.",
+        "image": "01n"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.434725540468662,
+          48.8854044508476
+        ]
+      },
+      "id": 29
+    },
+    {
+      "properties": {
+        "message": "Bonjour Noisy-le-Sec\ntemps : ciel dégagé\n et il fait : 1.92  degrés.",
+        "image": "01n"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.4554796412828637,
+          48.89075398314921
+        ]
+      },
+      "id": 30
+    },
+    {
+      "properties": {
+        "message": "Bonjour Pantin\ntemps : ciel dégagé\n et il fait : 2.01  degrés.",
+        "image": "01n"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.4014921382313617,
+          48.89628415113353
+        ]
+      },
+      "id": 31
+    },
+    {
+      "properties": {
+        "message": "Bonjour Montreuil\ntemps : ciel dégagé\n et il fait : 1.85  degrés.",
+        "image": "01n"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.4426908687000264,
+          48.8621905247295
+        ]
+      },
+      "id": 32
+    },
+    {
+      "properties": {
+        "message": "Bonjour Ardeatino\ntemps : partiellement nuageux\n et il fait : 8.49  degrés.",
+        "image": "03n"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.495233054047333,
+          41.850611016797046
+        ]
+      },
+      "id": 33
+    },
+    {
+      "properties": {
+        "message": "Bonjour Cerveteri\ntemps : pluie modérée\n et il fait : 7.9  degrés.",
+        "image": "10n"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.105648431413215,
+          41.99522029830101
+        ]
+      },
+      "id": 36
+    },
+    {
+      "properties": {
+        "message": "Bonjour Fiumicino\ntemps : forte pluie\n et il fait : 8.59  degrés.",
+        "image": "10n"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.24013082699318,
+          41.767469211332525
+        ]
+      },
+      "id": 37
+    },
+    {
+      "properties": {
+        "message": "Bonjour Chërnaya Rechka\ntemps : ciel dégagé\n et il fait : -17.88  degrés.",
+        "image": "01n"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          73.60281656262046,
+          61.28345746767607
+        ]
+      },
+      "id": 38
     }
   ]
 }

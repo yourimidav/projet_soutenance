@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import com.angular.weather.entities.Temperature;
 import com.angular.weather.entities.WorldCity;
 import com.angular.weather.services.TemperatureServiceInterface;
+import com.angular.weather.services.impl.WorldCityService;
 
 @RestController
 @RequestMapping("/temp")
@@ -14,9 +15,11 @@ import com.angular.weather.services.TemperatureServiceInterface;
 public class TemperatureController {
 
     private TemperatureServiceInterface temperatureServiceInterface;
+    private WorldCityService worldCityServ;
 
-    public TemperatureController(TemperatureServiceInterface temperatureServiceInterface) {
+    public TemperatureController(TemperatureServiceInterface temperatureServiceInterface, WorldCityService worldCityServ) {
         this.temperatureServiceInterface = temperatureServiceInterface;
+        this.worldCityServ = worldCityServ;
     }
 
     @GetMapping("/erature")
@@ -60,6 +63,8 @@ public class TemperatureController {
     public Temperature add(@RequestBody Temperature temperature) {
         System.out.println("Got a temperature");
         System.out.println(temperature);
+        WorldCity tempo = worldCityServ.getWorldCityByCityName(temperature.getVille().getCityName());
+        if (tempo != null) temperature.setVille(tempo);
         return temperatureServiceInterface.addTemperature(temperature);
     }
 

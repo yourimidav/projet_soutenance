@@ -3,6 +3,8 @@ package com.angular.weather.controllers;
 import com.angular.weather.entities.Marqueur;
 import com.angular.weather.entities.WorldCity;
 import com.angular.weather.services.MarkersServiceInterface;
+import com.angular.weather.services.impl.WorldCityService;
+
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -13,9 +15,11 @@ import java.util.List;
 public class MarqueurController {
 
     private MarkersServiceInterface markersServiceInterface;
+    private WorldCityService worldCityServ;
 
-    public MarqueurController(MarkersServiceInterface markersServiceInterface) {
+    public MarqueurController(MarkersServiceInterface markersServiceInterface, WorldCityService worldCityServ) {
         this.markersServiceInterface = markersServiceInterface;
+        this.worldCityServ = worldCityServ;
     }
 
     @GetMapping("/les")
@@ -41,6 +45,12 @@ public class MarqueurController {
 
     @PostMapping("/les")
     public Marqueur add(@RequestBody Marqueur marqueur){
+    	/*
+    	 * WorldCity tempo = worldCityServ.getWorldCityByCityName(temperature.getVille().getCityName());
+        if (tempo != null) temperature.setVille(tempo);
+    	 */
+    	WorldCity tempo = worldCityServ.getWorldCityByCityName(marqueur.getVille().getCityName());
+    	if (tempo != null) marqueur.setVille(tempo);
         return markersServiceInterface.addMarqueur(marqueur);
     }
     

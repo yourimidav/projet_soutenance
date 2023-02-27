@@ -7,6 +7,8 @@ import { WeatherService } from '../weather.service';
 import { MainTemperature } from '../mainTemperature';
 import { Temperature } from '../temperature';
 import { TemperatureService } from '../temperature.service';
+import { MarkersService } from '../markers.service';
+import { Markers } from '../marker';
 
 @Component({
   selector: 'app-worldcities-details',
@@ -20,7 +22,12 @@ export class WorldcitiesDetailsComponent {
   icon?: string;
   description?: string;
   temperature!: Temperature;
-  temperatures!: Temperature[];
+  temperatures: Temperature[] = [];
+  marqueurs: Markers[] = [];
+  marqueur!: Markers;
+
+  //for manage page
+  p: number = 1;
 
   constructor(
     private route: ActivatedRoute,
@@ -28,6 +35,7 @@ export class WorldcitiesDetailsComponent {
     private temperatureService: TemperatureService,
     private location: Location,
     private weatherService: WeatherService,
+    private markersService: MarkersService
   ){}
 
   ngOnInit(): void {
@@ -38,15 +46,12 @@ export class WorldcitiesDetailsComponent {
   getCity(): void{
     const id: number = Number(this.route.snapshot.paramMap.get('id'));
     this.worldCitiesService.getCityById(id).subscribe((city) => (this.city = city));
+    this.getAllTemperaureCity(this.city);
   }
 
+  //Get all temperatures associated to selected city
   getAllTemperaureCity(city: WorldCity): void{
-    //const id: number = Number(this.route.snapshot.paramMap.get('id'));
-    //this.city = this.worldCitiesService.getCityById(id).subscribe((city) => (this.city = city));
-    // TODO
-    //const id: number = Number(this.route.snapshot.paramMap.get('id'));
-    //this.worldCitiesService.getCityById(id).subscribe((city) => (this.city = city));
-    this.temperatureService.getByVille(city.id ?? 0).subscribe({
+    this.temperatureService.getAllTemperaturesForWille(city.id!).subscribe({
       next: (temperaturesFromObservable) => {
         this.temperatures = temperaturesFromObservable;
         console.log('Retrieved temperatures data :', temperaturesFromObservable);
@@ -54,6 +59,34 @@ export class WorldcitiesDetailsComponent {
       error: (error) => console.error(error),
       complete: () => console.log('Completed!'),
     });
+  }
+
+  //Delete a temperature saved to this city
+  deleteTemperature(temperature: Temperature): void {
+    this.temperatures = this.temperatures.filter((t) => t !== temperature);
+    const id = temperature.id !== undefined ? temperature.id : 0;
+    temperature.id = id;
+    this.temperatureService.deleteTemperature(temperature.id).subscribe();
+  }
+
+  //Get all markers associated to selected city
+  getAllMarkerCity(city: WorldCity): void{
+    this.markersService.getAllMarkersForCity(city).subscribe({
+      next: (markersFromObservable) => {
+        this.marqueurs = markersFromObservable;
+        console.log('Retrieved temperatures data :', markersFromObservable);
+      },
+      error: (error) => console.error(error),
+      complete: () => console.log('Completed!'),
+    });
+  }
+
+  //Delete a marker saved to this city
+  deleteMarker (mark: Markers): void {
+    this.marqueurs = this.marqueurs.filter((m) => m !== mark);
+    const id = mark.id !== undefined ? mark.id : 0;
+    mark.id = id;
+    this.temperatureService.deleteTemperature(mark.id).subscribe();
   }
 
   saveCity(): void {

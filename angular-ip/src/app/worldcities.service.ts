@@ -114,6 +114,13 @@ export class WorldcitiesService {
     );
   }
 
+  /**
+   * DELETE Method
+   * Delete a city and all temperatures + markers attached
+   * to that city in the database
+   * @param id 
+   * @returns 
+   */
   deleteCityAll(id: number): Observable<WorldCity> {
     const url = `${this.worldCitiesUrl}/autres/${id}`;
     return this.http.delete<WorldCity>(url, this.httpOptions).pipe(
@@ -123,16 +130,16 @@ export class WorldcitiesService {
   }
 
   /* GET cities whose name contains search term */
-searchCities(term: string): Observable<WorldCity[]> {
-  if (!term.trim()) {
-    // if not search term, return empty hero array.
-    return of([]);
-  }//cityName
-  return this.http.get<WorldCity[]>(`${this.worldCitiesUrl}/names/${term}`).pipe(
-    tap(x => x.length ?
-       this.logMessage(`found cities matching "${term}"`) :
-       this.logMessage(`no cities matching "${term}"`)),
-    catchError(this.handleError<WorldCity[]>('searchCities', []))
-  );
-}
+  searchCities(term: string): Observable<WorldCity[]> {
+    if (!term.trim()) {
+      // if not search term, return empty hero array.
+      return of([]);
+    }//cityName
+    return this.http.get<WorldCity[]>(`${this.worldCitiesUrl}/names/${term}`).pipe(
+      tap(x => x.length ?
+        this.logMessage(`found cities matching "${term}"`) :
+        this.logMessage(`no cities matching "${term}"`)),
+      catchError(this.handleError<WorldCity[]>('searchCities', []))
+    );
+  }
 }

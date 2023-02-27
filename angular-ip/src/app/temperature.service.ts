@@ -47,6 +47,11 @@ getTemperatures(): Observable<Temperature[]> {
   );
 }
 
+/**
+ * Get all temperature associated to a city designated by id
+ * @param id 
+ * @returns 
+ */
 getAllTemperaturesForWille(id: number): Observable<Temperature[]> {
   this.log('fetched temperatures for city');
   const url = `${this.temperatureUrl+"/ville"}/${id}`;
@@ -65,7 +70,7 @@ getAllTemperaturesForWille(id: number): Observable<Temperature[]> {
     );
   }
 
-  getByVille(id:number): Observable<Temperature[]> {
+  getByVilleId(id:number): Observable<Temperature[]> {
     const url = `${this.temperatureUrl}/ville/${id}`;
     console.log(this.http.get<Temperature[]>(url))
     return this.http.get<Temperature[]>(url).pipe(

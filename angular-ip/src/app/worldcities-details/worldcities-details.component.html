@@ -19,8 +19,93 @@
 </div>
 <button type="button" (click)="updaCity()">Upadate city name</button>
 <button type="button" (click)="goBack()">Go back</button>
-<button type="button" (click)="getAllTemperaureCity(city)">Show savedTemps</button>
-<div *ngFor="let temp of temperatures">
-  {{ temp.id }} ==>Test<br>
+<!--<button type="button" (click)="getAllTemperaureCity(city)">Show savedTemps</button>-->
+<h2>All Temperature saved for this city</h2>
+<div class="table-wrapper">
+  <table class="fl-table">
+    <thead>
+      <tr>
+          <th>id</th>
+          <th>Date</th>
+          <th>Temperature</th>
+          <th>Feel like</th>
+          <th>Temperature min</th>
+          <th>Temperature max</th>
+          <th>Pressure</th>
+          <th>Humidity</th>
+          <th>Sea level</th>
+          <th>Grand level</th>
+          <th>Action</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let temp of temperatures | paginate: { itemsPerPage: 5, currentPage: p }">
+      <tr>
+        <td>
+             <!--<a routerLink="/cityDetail/{{ city.id }}">-->
+             {{ temp.id }}
+             <!--</a>-->
+         </td>
+         <td>{{ temp.dateReleve }}</td>
+         <td>{{ temp.temp }}</td>
+         <td>{{ temp.feelsLike }}</td>
+         <td>{{ temp.temperatureMin }} </td>
+         <td>{{ temp.temperatureMax }} </td>
+         <td>{{ temp.pressure }}</td>
+         <td>{{ temp.humidity }}</td>
+         <td>{{ temp.sea_level }}</td>
+         <td>{{ temp.grndLevel }}</td>
+         <td>
+             <button type="button" class="delete outer" title="Delete temperature"
+                 (click)="deleteTemperature(temp)"> 
+                 <div class="inner">
+                     <label class="labeldelete">Delete   </label>
+                 </div>
+             </button>
+          </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
+<pagination-controls (pageChange)="p = $event" class="float-right"></pagination-controls>
+
+<h2>All markers saved for this city</h2>
+<div class="table-wrapper">
+  <table class="fl-table">
+    <thead>
+      <tr>
+          <th>id</th>
+          <th>Type</th>
+          <th>Message</th>
+          <th>Image</th>
+          <th>Type Geo</th>
+          <th>Coordinates (Lat & long)</th>
+          <th>Action</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let marker  of marqueurs | paginate: { itemsPerPage: 5, currentPage: p }">
+      <tr>
+        <td>
+             <!--<a routerLink="/cityDetail/{{ city.id }}">
+             {{ city.id }}
+             </a>-->
+             {{ marker.id }}
+         </td>
+         <td>{{ marker.type }}</td>
+         <td>{{ marker.message }} </td>
+         <td>{{ marker.image }} </td>
+         <td>{{ marker.typegeo }}</td>
+         <td>{{ marker.coordinates }}</td>
+         <td>
+             <button type="button" class="delete outer" title="Delete Marker"
+                 (click)="deleteMarker(marker)"> 
+                 <div class="inner">
+                     <label class="labeldelete">Delete   </label>
+                 </div>
+             </button>
+          </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<pagination-controls (pageChange)="p = $event" class="float-right"></pagination-controls>
 

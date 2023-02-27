@@ -169,40 +169,8 @@ export class WorldcitiesComponent {
     const id = city.id !== undefined ? city.id : 0;
     city.id = id;
     this.worldCityService.deleteCityAll(city.id).subscribe();
-    /* this.cities = this.cities.filter((c) => c !== city);
-    const id = city.id !== undefined ? city.id : 0;
-    city.id = id;
-    this.temperatureService.getByVille(id).subscribe((data) => {
-      data.forEach((datau) => {
-        if(datau.id){
-          this.temperatureService.deleteTemperature(datau.id);
-        }
-      });
-      error: err =>console.log( err),
-     () => {
-      this.markersService.getAllMarkersForCityById(id).subscribe((data1)=>{
-        data1.forEach((datau1) => {
-          if(datau1.id){
-            this.markersService.deleteMarker(datau1.id);
-          }
-        })
-      
-    },() => {
-      this.worldCityService.deleteCity(id).subscribe(() => {
-        console.log('La ville a été supprimée avec succès.');
-      })})
-    })
-      
- */
   }
 
   p: number = 1;
 
 }
-/* this.markersService.getAllMarkersForCityById(id).subscribe((data1)=>{
-        data1.forEach((datau1) => {
-          if(datau1.id){
-            this.markersService.deleteMarker(datau1.id);
-          }
-        })
-      }) */
