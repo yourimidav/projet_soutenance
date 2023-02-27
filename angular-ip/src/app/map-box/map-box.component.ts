@@ -309,9 +309,13 @@ export class MapBoxComponent {
       coordinates: this.coordinates1,
       ville: maVille
     }
-    this.addTemperature(newTemp);
+    // ajout temperature, puis une fois fini, ajout du marqueur
+    this.temperatureService.addTemperature(newTemp).subscribe({
+      complete: () => this.addMarker(newMark)
+    });
+    //this.addTemperature(newTemp);
     //console.log("Date: "+this.dateReleve.toISOString());
-    this.addMarker(newMark);
+    //this.addMarker(newMark);
   }
 
   //PUT a temperature

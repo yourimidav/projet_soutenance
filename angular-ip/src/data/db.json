@@ -179,6 +179,246 @@
         ]
       },
       "id": 12
+    },
+    {
+      "properties": {
+        "message": "Bonjour Halkalı\ntemps : ciel dégagé\n et il fait : 17.73  degrés.",
+        "image": "01d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.762524900791334,
+          41.063281620700536
+        ]
+      },
+      "id": 13
+    },
+    {
+      "properties": {
+        "message": "Bonjour Boğazlıyan\ntemps : partiellement nuageux\n et il fait : 12.04  degrés.",
+        "image": "03d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.22820054982856,
+          39.04357495357081
+        ]
+      },
+      "id": 14
+    },
+    {
+      "properties": {
+        "message": "Bonjour Denizli\ntemps : couvert\n et il fait : 18  degrés.",
+        "image": "04d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.136297688966238,
+          37.74232900066839
+        ]
+      },
+      "id": 15
+    },
+    {
+      "properties": {
+        "message": "Bonjour Tanger-Medina\ntemps : partiellement nuageux\n et il fait : 14.97  degrés.",
+        "image": "03d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.804280959441144,
+          35.77281868054493
+        ]
+      },
+      "id": 16
+    },
+    {
+      "properties": {
+        "message": "Bonjour Bab El Jazira\ntemps : peu nuageux\n et il fait : 14.99  degrés.",
+        "image": "02d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.19622595162295,
+          36.81072479564483
+        ]
+      },
+      "id": 17
+    },
+    {
+      "properties": {
+        "message": "Bonjour Harare\ntemps : légère pluie\n et il fait : 19.95  degrés.",
+        "image": "10d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.943521471738535,
+          -17.776896517225637
+        ]
+      },
+      "id": 18
+    },
+    {
+      "properties": {
+        "message": "Bonjour Ash Shāţibī\ntemps : ciel dégagé\n et il fait : 19.87  degrés.",
+        "image": "01d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.908803325606414,
+          31.20546801437426
+        ]
+      },
+      "id": 19
+    },
+    {
+      "properties": {
+        "message": "Bonjour Pikine\ntemps : ciel dégagé\n et il fait : 21.11  degrés.",
+        "image": "01d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -17.422139694041903,
+          14.739271328546309
+        ]
+      },
+      "id": 20
+    },
+    {
+      "properties": {
+        "message": "Bonjour Sofia\ntemps : nuageux\n et il fait : 8.97  degrés.",
+        "image": "04d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.328425151520406,
+          42.71555441551237
+        ]
+      },
+      "id": 21
+    },
+    {
+      "properties": {
+        "message": "Bonjour Bukovlak\ntemps : nuageux\n et il fait : 7.57  degrés.",
+        "image": "04d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          24.618821438330855,
+          43.43419760290007
+        ]
+      },
+      "id": 22
+    },
+    {
+      "properties": {
+        "message": "Bonjour Sliven\ntemps : couvert\n et il fait : 17.88  degrés.",
+        "image": "04d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.34410266158079,
+          42.69459853678916
+        ]
+      },
+      "id": 23
+    },
+    {
+      "properties": {
+        "message": "Bonjour Telychka\ntemps : couvert\n et il fait : 4  degrés.",
+        "image": "04d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.5089308413377,
+          50.37544091838018
+        ]
+      },
+      "id": 24
+    },
+    {
+      "properties": {
+        "message": "Bonjour Tchernihiv\ntemps : couvert\n et il fait : 1.49  degrés.",
+        "image": "04d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.283491555711237,
+          51.448557739127864
+        ]
+      },
+      "id": 25
+    },
+    {
+      "properties": {
+        "message": "Bonjour Movchany\ntemps : légères chutes de neige\n et il fait : 0.66  degrés.",
+        "image": "13d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.24375426199356,
+          49.94273438199593
+        ]
+      },
+      "id": 26
+    },
+    {
+      "properties": {
+        "message": "Bonjour Annau\ntemps : ciel dégagé\n et il fait : 17.71  degrés.",
+        "image": "01d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          58.47956632288884,
+          37.905914067282225
+        ]
+      },
+      "id": 27
+    },
+    {
+      "properties": {
+        "message": "Bonjour Kūy-e Ekhteşāşī-ye Gomrok\ntemps : peu nuageux\n et il fait : 17  degrés.",
+        "image": "02d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          51.277829657268455,
+          35.73906382089791
+        ]
+      },
+      "id": 28
     }
   ]
 }
