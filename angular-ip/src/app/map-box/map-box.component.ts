@@ -23,7 +23,7 @@ import { Location } from '@angular/common';
 
 export class MapBoxComponent {
   map!: Map; // la carte
-  style: string = 'mapbox://styles/mapbox/light-v11'; // style de la carte
+  style: string = 'mapbox://styles/mapbox/outdoors-v12'; // style de la carte
   lat: number = 0; // latitude à l'initialisation
   lng: number = 1.297352; // longitude à l'initialisation
   message: string = 'Bonjour'; // message à afficher sous le marqueur
