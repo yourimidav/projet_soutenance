@@ -173,6 +173,7 @@ export class MapBoxComponent {
     this.map.on('load', () => {
       this.createSource();
       this.createLayer();
+      this.loadImageDebut();
       // pour chaque clic sur la carte
       this.map.on('click', (event) => {
         // récupération des coordonées du clic
@@ -395,7 +396,7 @@ export class MapBoxComponent {
   }
 
   loadImage() {
-    let url: string = `http://openweathermap.org/img/wn/${this.iconId}@2x.png`;
+    let url: string = `https://weather-icons.cleverapps.io/weather/icons/${this.iconId}.png`
 
     if (this.toggleButtonState == 'classical') {
       url = `assets/marker-icons/mapbox-marker-icon-20px-${this.iconId}.png`;
@@ -436,4 +437,26 @@ export class MapBoxComponent {
   goBack(): void {
     this.location.back();
   }
+
+
+  loadImageDebut() {
+    const images =['01d','01n','02d','02n','03d','03n','04d','04n','09d','09n','11d','11n','10d','10n','13d','13n','50d','50n']
+    images.forEach(image => {
+      
+    
+    let url: string = `http://openweathermap.org/img/wn/${this.iconId}@2x.png`;
+  
+    // téléchargement de l'image
+    this.map.loadImage(
+      // `assets/marker-icons/mapbox-marker-icon-20px-${color}.png`,
+      url,
+      (error, image) => {
+        if (error) throw error;
+  
+        this.map.addImage(this.iconId, image!);
+      }
+    );});
+  }
 }
+
+

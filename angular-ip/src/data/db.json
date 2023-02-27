@@ -2,528 +2,183 @@
   "markers": [
     {
       "properties": {
-        "message": "Bonjour Paris 20 Ménilmontant\ntemps : partiellement nuageux\n et il fait : 4.21  degrés.",
-        "image": "03d"
+        "message": "Bonjour Quartier du Palais-Royal\ntemps : ciel dégagé\n et il fait : 2.12  degrés.",
+        "image": "01d"
       },
       "type": "Feature",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          2.3791086853414356,
-          48.845614210250716
+          2.2967564184944536,
+          48.85899610171498
         ]
       },
       "id": 1
     },
     {
       "properties": {
-        "message": "hello Maplewood\ntemps : peu nuageux\n et il fait : -3.11  degrés.",
-        "image": "02n"
+        "message": "Bonjour Quartier du Palais-Royal\ntemps : ciel dégagé\n et il fait : 1.94  degrés.",
+        "image": "01d"
       },
       "type": "Feature",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -74.2930413355823,
-          40.733618625404176
+          2.347095917287703,
+          48.88019336544298
         ]
       },
       "id": 2
     },
     {
       "properties": {
-        "message": "hello Philadelphie\ntemps : couvert\n et il fait : -0.7  degrés.",
-        "image": "04n"
+        "message": "Bonjour Neuilly-sur-Seine\ntemps : ciel dégagé\n et il fait : 1.92  degrés.",
+        "image": "01d"
       },
       "type": "Feature",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -75.19740568729804,
-          39.96121819086625
+          2.2854527723526985,
+          48.86979586656406
         ]
       },
       "id": 3
     },
     {
       "properties": {
-        "message": "hello Tatebayashi\ntemps : ciel dégagé\n et il fait : 3.25  degrés.",
-        "image": "01n"
+        "message": "Bonjour Suresnes\ntemps : ciel dégagé\n et il fait : 2.24  degrés.",
+        "image": "01d"
       },
       "type": "Feature",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          139.46382427968513,
-          36.241773827623916
+          2.234545575623997,
+          48.85986558157492
         ]
       },
       "id": 4
     },
     {
       "properties": {
-        "message": "hello ‘Ewa Beach\ntemps : ciel dégagé\n et il fait : 22.27  degrés.",
-        "image": "01n"
+        "message": "Bonjour Plouguin\ntemps : nuageux\n et il fait : 4.6  degrés.",
+        "image": "04d"
       },
       "type": "Feature",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -158.00520075524202,
-          21.328250833218377
+          -4.5560516310279695,
+          48.54602416722673
         ]
       },
       "id": 5
     },
     {
       "properties": {
-        "message": "hello El Battan\ntemps : partiellement nuageux\n et il fait : 17.86  degrés.",
-        "image": "03d"
+        "message": "Bonjour Suresnes\ntemps : ciel dégagé\n et il fait : 2.24  degrés.",
+        "image": "01d"
       },
       "type": "Feature",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          9.94258924639422,
-          36.81386009986227
+          2.226453892768177,
+          48.86113144119878
         ]
       },
       "id": 6
     },
     {
       "properties": {
-        "message": "hello Tremestieri Etneo\ntemps : peu nuageux\n et il fait : 14.91  degrés.",
-        "image": "02d"
+        "message": "Bonjour Le Perray-en-Yvelines\ntemps : ciel dégagé\n et il fait : 1.51  degrés.",
+        "image": "01d"
       },
       "type": "Feature",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          15.057289685172464,
-          37.57307148411188
+          1.8573013066129533,
+          48.694186146635275
+        ]
+      },
+      "id": 7
+    },
+    {
+      "properties": {
+        "message": "Bonjour Senonches\ntemps : ciel dégagé\n et il fait : 1.25  degrés.",
+        "image": "01d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.0120043542857786,
+          48.58942094069877
         ]
       },
       "id": 8
     },
     {
       "properties": {
-        "message": "hello Anguillara Sabazia\ntemps : couvert\n et il fait : 11.25  degrés.",
+        "message": "Bonjour Plounévez-Lochrist\ntemps : nuageux\n et il fait : 5.2  degrés.",
         "image": "04d"
       },
       "type": "Feature",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          12.302666101381817,
-          42.094107343370865
+          -4.220255992482009,
+          48.630298548771265
         ]
       },
       "id": 9
     },
     {
       "properties": {
-        "message": "hello Moriondo Torinese\ntemps : légères chutes de neige\n et il fait : 2.99  degrés.",
-        "image": "13d"
+        "message": "Bonjour Malakoff\ntemps : ciel dégagé\n et il fait : 2.53  degrés.",
+        "image": "01d"
       },
       "type": "Feature",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          7.937990542206137,
-          45.03864070515243
+          2.3022472604566815,
+          48.81284504247708
         ]
       },
       "id": 10
     },
     {
       "properties": {
-        "message": "hello Blanquefort\ntemps : ciel dégagé\n et il fait : 6.29  degrés.",
+        "message": "Bonjour Paris 14\ntemps : ciel dégagé\n et il fait : 2.66  degrés.",
         "image": "01d"
       },
       "type": "Feature",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -0.5924103833885397,
-          44.91946433598318
+          2.31963145654737,
+          48.84266036986196
         ]
       },
       "id": 11
     },
     {
       "properties": {
-        "message": "Bonjour Boulogne-Billancourt\ntemps : nuageux\n et il fait : 4.21  degrés.",
+        "message": "Bonjour Ploudaniel\ntemps : nuageux\n et il fait : 5.23  degrés.",
         "image": "04d"
       },
       "type": "Feature",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          2.2723897304722698,
-          48.82532334414924
+          -4.307803936075146,
+          48.507844713506074
         ]
       },
       "id": 12
-    },
-    {
-      "properties": {
-        "message": "Bonjour Arcueil\ntemps : ciel dégagé\n et il fait : 4.44  degrés.",
-        "image": "01d"
-      },
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          2.322011773927244,
-          48.79595763010039
-        ]
-      },
-      "id": 13
-    },
-    {
-      "properties": {
-        "message": "Bonjour Vanves\ntemps : ciel dégagé\n et il fait : 5.01  degrés.",
-        "image": "01d"
-      },
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          2.2941187775857372,
-          48.83684735928111
-        ]
-      },
-      "id": 14
-    },
-    {
-      "properties": {
-        "message": "Bonjour Vanves\ntemps : ciel dégagé\n et il fait : 5.01  degrés.",
-        "image": "01d"
-      },
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          2.2973380917685517,
-          48.83601141661049
-        ]
-      },
-      "id": 15
-    },
-    {
-      "properties": {
-        "message": "Bonjour Boulogne-Billancourt\ntemps : ciel dégagé\n et il fait : 4.94  degrés.",
-        "image": "01d"
-      },
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          2.253701928176838,
-          48.85134538738913
-        ]
-      },
-      "id": 16
-    },
-    {
-      "properties": {
-        "message": "Bonjour Paris 14\ntemps : ciel dégagé\n et il fait : 4.85  degrés.",
-        "image": "01d"
-      },
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          2.327152856624167,
-          48.827734190657736
-        ]
-      },
-      "id": 17
-    },
-    {
-      "properties": {
-        "message": "Bonjour Rambouillet\ntemps : peu nuageux\n et il fait : 3.95  degrés.",
-        "image": "02d"
-      },
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          1.8226710158406831,
-          48.64216106050117
-        ]
-      },
-      "id": 18
-    },
-    {
-      "properties": {
-        "message": "Bonjour Barry\ntemps : partiellement nuageux\n et il fait : 7.92  degrés.",
-        "image": "03d"
-      },
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -3.28389112345414,
-          51.383731562358776
-        ]
-      },
-      "id": 19
-    },
-    {
-      "properties": {
-        "message": "Bonjour Belgard\ntemps : nuageux\n et il fait : 6.82  degrés.",
-        "image": "04d"
-      },
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -6.395548378814766,
-          53.31030002064233
-        ]
-      },
-      "id": 20
-    },
-    {
-      "properties": {
-        "message": "Bonjour Rivas-Vaciamadrid\ntemps : ciel dégagé\n et il fait : 10.14  degrés.",
-        "image": "01d"
-      },
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -3.555927934059099,
-          40.350172062983546
-        ]
-      },
-      "id": 21
-    },
-    {
-      "properties": {
-        "message": "Bonjour Bnei Ayish\ntemps : ciel dégagé\n et il fait : 16.82  degrés.",
-        "image": "01n"
-      },
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          34.79956783911692,
-          31.757096619059965
-        ]
-      },
-      "id": 22
-    },
-    {
-      "properties": {
-        "message": "Bonjour Sarcelles\ntemps : ciel dégagé\n et il fait : 4.06  degrés.",
-        "image": "01d"
-      },
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          2.3798509895036943,
-          48.995756045982176
-        ]
-      },
-      "id": 23
-    },
-    {
-      "properties": {
-        "message": "Bonjour Franconville\ntemps : ciel dégagé\n et il fait : 3.04  degrés.",
-        "image": "01n"
-      },
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          2.242350703457163,
-          48.98849278564657
-        ]
-      },
-      "id": 24
-    },
-    {
-      "properties": {
-        "message": "Bonjour Fosses\ntemps : ciel dégagé\n et il fait : 2.8  degrés.",
-        "image": "01n"
-      },
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          2.508132005545008,
-          49.09778984199883
-        ]
-      },
-      "id": 25
-    },
-    {
-      "properties": {
-        "message": "Bonjour Neuilly-sur-Seine\ntemps : ciel dégagé\n et il fait : 2.14  degrés.",
-        "image": "01n"
-      },
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          2.2693810600109714,
-          48.884404144802545
-        ]
-      },
-      "id": 26
-    },
-    {
-      "properties": {
-        "message": "Bonjour Le Pré-Saint-Gervais\ntemps : ciel dégagé\n et il fait : 1.9  degrés.",
-        "image": "01n"
-      },
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          2.4029681857321634,
-          48.88331614780222
-        ]
-      },
-      "id": 27
-    },
-    {
-      "properties": {
-        "message": "Bonjour Romainville\ntemps : ciel dégagé\n et il fait : 1.58  degrés.",
-        "image": "01n"
-      },
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          2.4161861117577246,
-          48.87942151187971
-        ]
-      },
-      "id": 28
-    },
-    {
-      "properties": {
-        "message": "Bonjour Romainville\ntemps : ciel dégagé\n et il fait : 1.55  degrés.",
-        "image": "01n"
-      },
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          2.434725540468662,
-          48.8854044508476
-        ]
-      },
-      "id": 29
-    },
-    {
-      "properties": {
-        "message": "Bonjour Noisy-le-Sec\ntemps : ciel dégagé\n et il fait : 1.92  degrés.",
-        "image": "01n"
-      },
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          2.4554796412828637,
-          48.89075398314921
-        ]
-      },
-      "id": 30
-    },
-    {
-      "properties": {
-        "message": "Bonjour Pantin\ntemps : ciel dégagé\n et il fait : 2.01  degrés.",
-        "image": "01n"
-      },
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          2.4014921382313617,
-          48.89628415113353
-        ]
-      },
-      "id": 31
-    },
-    {
-      "properties": {
-        "message": "Bonjour Montreuil\ntemps : ciel dégagé\n et il fait : 1.85  degrés.",
-        "image": "01n"
-      },
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          2.4426908687000264,
-          48.8621905247295
-        ]
-      },
-      "id": 32
-    },
-    {
-      "properties": {
-        "message": "Bonjour Ardeatino\ntemps : partiellement nuageux\n et il fait : 8.49  degrés.",
-        "image": "03n"
-      },
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          12.495233054047333,
-          41.850611016797046
-        ]
-      },
-      "id": 33
-    },
-    {
-      "properties": {
-        "message": "Bonjour Cerveteri\ntemps : pluie modérée\n et il fait : 7.9  degrés.",
-        "image": "10n"
-      },
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          12.105648431413215,
-          41.99522029830101
-        ]
-      },
-      "id": 36
-    },
-    {
-      "properties": {
-        "message": "Bonjour Fiumicino\ntemps : forte pluie\n et il fait : 8.59  degrés.",
-        "image": "10n"
-      },
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          12.24013082699318,
-          41.767469211332525
-        ]
-      },
-      "id": 37
-    },
-    {
-      "properties": {
-        "message": "Bonjour Chërnaya Rechka\ntemps : ciel dégagé\n et il fait : -17.88  degrés.",
-        "image": "01n"
-      },
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          73.60281656262046,
-          61.28345746767607
-        ]
-      },
-      "id": 38
     }
   ]
 }
