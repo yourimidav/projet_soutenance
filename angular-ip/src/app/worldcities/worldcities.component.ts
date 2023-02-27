@@ -8,6 +8,7 @@ import { WorldCity } from '../worldCity';
 import { Observable,of } from 'rxjs';
 import { TemperaturesComponent } from '../temperature/temperatures.component';
 import { MarkersService } from '../markers.service';
+import { Markers } from '../marker';
 //import {NgxPaginationModule} from 'ngx-pagination';
 
 @Component({
@@ -21,6 +22,9 @@ export class WorldcitiesComponent {
   cities: WorldCity[] = [];
   city!: WorldCity;
   temperatures:Temperature[]=[];
+  marqueurs: Markers [] = [];
+  marqueur!: Markers;
+
   //Données Ville
   longi!: number;
   lati!: number;
@@ -41,6 +45,13 @@ export class WorldcitiesComponent {
   niveauMer!: number;
   grnd_niveau!: number;
   dateReleve!: string;
+
+  //Données pour le marqueur
+  type!: string;
+  message!: string;
+  image!:string;
+  typegeo!:string;
+  coordinates!:number[];
 
   cityForm = new FormGroup ({
     nomVille: new FormControl('', Validators.required),
@@ -72,6 +83,25 @@ export class WorldcitiesComponent {
       this.humidite = data.main.humidity;
       this.niveauMer =  data.main.sea_level;
       this.grnd_niveau = data.main.grnd_level;
+      //Marqueurs
+      //this.type =  string;
+      /**
+       * this.type1="Feature";
+//this.marqueur.type = "Feature";
+this.message1=data.weather[0].description;
+//this.marqueur.message = data.weather[0].description;
+this.image1=data.weather[0].icon;
+//this.marqueur.image = data.weather[0].icon;
+this.typegeo1="Point";
+
+this.coordinates1=[coordinates[1],coordinates[0]];
+this.nomville=data.name;
+this.temp=data.main.temp;
+       */
+      this.message = data.weather[0].description;
+      this.image = data.weather[0].icon;
+      //this.typegeo = string;
+      this.coordinates = [data.coord.lat, data.coord.lon]
     }, 
   complete: () => this.addCityAndTemperature()});
   }
@@ -100,9 +130,19 @@ export class WorldcitiesComponent {
       grndLevel: this.grnd_niveau,
       ville: ville,
     }
+
+    const marq: Markers = {
+      type: "Feature",
+      message: this.message,
+      image: this.image,
+      typegeo: "Point",
+      coordinates: this.coordinates,
+      ville: ville
+    }
     //this.addCity(ville);
     console.log(ville);
     this.addTemperature(tempEra);
+    this.addMarker(marq);
   }
 
   parseCityValue(): void{
@@ -152,6 +192,14 @@ export class WorldcitiesComponent {
       this.temperatures.push(temperature);
       if(temperature.ville)this.cities.push(temperature.ville);
     });
+  }
+
+  //PUT a temperature
+  addMarker(newMarker: Markers): void{
+    //this.nom =  newTemperature.ville?.cityName+'';
+    if (!newMarker) return;
+    this.markersService.addMarker(newMarker).subscribe(
+    );
   }
 
   //UPDATE a city
