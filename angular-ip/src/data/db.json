@@ -419,6 +419,306 @@
         ]
       },
       "id": 28
+    },
+    {
+      "properties": {
+        "message": "Bonjour Auffargis\nweather : clear sky\n and it is : 5.96 °C",
+        "image": "01d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.9084267229534362,
+          48.67457913071479
+        ]
+      },
+      "id": 29
+    },
+    {
+      "properties": {
+        "message": "Bonjour Auffargis\nweather : clear sky\n and it is : 5.96 °C",
+        "image": "01d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.9084267229534362,
+          48.67457913071479
+        ]
+      },
+      "id": 30
+    },
+    {
+      "properties": {
+        "message": "Bonjour Saint-Béron\nweather : broken clouds\n and it is : 6.05 °C",
+        "image": "04d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.713580525415722,
+          45.496101640898075
+        ]
+      },
+      "id": 31
+    },
+    {
+      "properties": {
+        "message": "Bonjour Saint-Front-sur-Lémance\nweather : overcast clouds\n and it is : 6.17 °C",
+        "image": "04d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.9832871388746298,
+          44.570996295493615
+        ]
+      },
+      "id": 32
+    },
+    {
+      "properties": {
+        "message": "Bonjour Gometz-la-Ville\nweather : clear sky\n and it is : 6.13 °C",
+        "image": "01d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.119574367725562,
+          48.65486270409306
+        ]
+      },
+      "id": 33
+    },
+    {
+      "properties": {
+        "message": "Bonjour Fégréac\nweather : clear sky\n and it is : 7.86 °C",
+        "image": "01d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.03239925208959,
+          47.58960820550223
+        ]
+      },
+      "id": 34
+    },
+    {
+      "properties": {
+        "message": "Bonjour Saint-Servais\nweather : broken clouds\n and it is : 7.16 °C",
+        "image": "04d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.177524641777097,
+          48.55698044626527
+        ]
+      },
+      "id": 35
+    },
+    {
+      "properties": {
+        "message": "Bonjour Saint-Rémy-lès-Chevreuse\nweather : clear sky\n and it is : 6.49 °C",
+        "image": "01d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.0894632416265893,
+          48.69458106305021
+        ]
+      },
+      "id": 36
+    },
+    {
+      "properties": {
+        "message": "Bonjour Saint-Tugen\nweather : clear sky\n and it is : 8.56 °C",
+        "image": "01d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.631221676288135,
+          47.89222420915078
+        ]
+      },
+      "id": 37
+    },
+    {
+      "properties": {
+        "message": "Bonjour Plouescat\nweather : broken clouds\n and it is : 7.37 °C",
+        "image": "04d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.135948972988956,
+          48.66088166421369
+        ]
+      },
+      "id": 38
+    },
+    {
+      "properties": {
+        "message": "Bonjour Dampierre-en-Yvelines\nweather : clear sky\n and it is : 6.41 °C",
+        "image": "01d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.9816031058571753,
+          48.70543532105697
+        ]
+      },
+      "id": 39
+    },
+    {
+      "properties": {
+        "message": "Bonjour Vernon\nweather : clear sky\n and it is : 5.79 °C",
+        "image": "01d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.527603748460507,
+          49.10217292315593
+        ]
+      },
+      "id": 40
+    },
+    {
+      "properties": {
+        "message": "Bonjour Saint-Martin-Longueau\nweather : clear sky\n and it is : 6.97 °C",
+        "image": "01d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.6293445914133144,
+          49.35469356655017
+        ]
+      },
+      "id": 41
+    },
+    {
+      "properties": {
+        "message": "Bonjour Chenoise\nweather : clear sky\n and it is : 6.68 °C",
+        "image": "01d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.238212757489606,
+          48.62992710318349
+        ]
+      },
+      "id": 42
+    },
+    {
+      "properties": {
+        "message": "Bonjour Janville\nweather : clear sky\n and it is : 5.71 °C",
+        "image": "01d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.9288767897314187,
+          48.261791874602665
+        ]
+      },
+      "id": 43
+    },
+    {
+      "properties": {
+        "message": "Bonjour La Ferté-Imbault\nweather : few clouds\n and it is : 6.57 °C",
+        "image": "02d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.9746168851933987,
+          47.410487821030785
+        ]
+      },
+      "id": 44
+    },
+    {
+      "properties": {
+        "message": "Bonjour Cote d'Or\nweather : broken clouds\n and it is : 3.12 °C",
+        "image": "04d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.870519834190304,
+          47.42303476362656
+        ]
+      },
+      "id": 45
+    },
+    {
+      "properties": {
+        "message": "Hello Châlons-en-Champagne\nweather : clear sky\n and it is : 6.36 °C",
+        "image": "01d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.385269376924867,
+          48.980450683582575
+        ]
+      },
+      "id": 46
+    },
+    {
+      "properties": {
+        "message": "Hello Brædstrup\nweather : few clouds\n and it is : 8.8 °C",
+        "image": "02d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.66677684414526,
+          56.003278494617746
+        ]
+      },
+      "id": 47
+    },
+    {
+      "properties": {
+        "message": "Bonjour Neuilly-en-Thelle\nweather : clear sky\n and it is : 6.13 °C",
+        "image": "01d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2385600088462922,
+          49.230221157735656
+        ]
+      },
+      "id": 48
     }
   ]
 }

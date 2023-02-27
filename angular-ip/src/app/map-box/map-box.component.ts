@@ -129,8 +129,12 @@ export class MapBoxComponent {
 
   loadMarkers(): void {
     // Appel du service pour faire une requête HTTP
-    this.mapService.getMarkers().subscribe((data: CustomGeoJson[]) => {
-      this.markers = data;
+    this.markerService.getAllMarkers().subscribe((data: Markers[]) => {
+        data.forEach((marker)=> {
+          this.markers.push(new CustomGeoJson([marker.coordinates[1],marker.coordinates[0]],{message:marker.message,image:marker.image}))
+        })
+        console.log(this.markers)
+      //this.markers = data;
     });
   }
 
@@ -174,6 +178,7 @@ export class MapBoxComponent {
       this.createSource();
       this.createLayer();
       this.loadImageDebut();
+      this.setMarkers();
       // pour chaque clic sur la carte
       this.map.on('click', (event) => {
         // récupération des coordonées du clic
@@ -245,14 +250,14 @@ export class MapBoxComponent {
             this.iconId=this.image1;
             // création d'un nouveau marqueur
             const newMarker = new CustomGeoJson(coordinates, {
-              message: this.message+" "+this.nomville+"\ntemps : "+this.message1+"\n et il fait : "+this.temp+"  degrés.",
+              message: this.message+" "+this.nomville+"\nweather : "+this.message1+"\n and it is : "+this.temp+" °C",
               image: this.iconId,
             });
             // ajout du marqueur en base de données
             this.mapService.createMarker(newMarker).subscribe((data) => {
               this.markers.push(data);
               // Chargement de l'image du marqueur
-              this.loadImage();
+              //this.loadImage(); plus besoin avec le load image debut
               // Ajout du marqueur sur la carte
               this.setMarkers();
               //complete: () => this.saveDataToDataBase()
@@ -399,6 +404,7 @@ export class MapBoxComponent {
     });
   }
 
+
   loadImage() {
     let url: string = `https://weather-icons.cleverapps.io/weather/icons/${this.iconId}.png`
 
@@ -445,10 +451,10 @@ export class MapBoxComponent {
 
   loadImageDebut() {
     const images =['01d','01n','02d','02n','03d','03n','04d','04n','09d','09n','11d','11n','10d','10n','13d','13n','50d','50n']
-    images.forEach(image => {
+    images.forEach(imaget => {
       
     
-    let url: string = `http://openweathermap.org/img/wn/${this.iconId}@2x.png`;
+    let url: string = `https://weather-icons.cleverapps.io/weather/icons/${imaget}.png`;
   
     // téléchargement de l'image
     this.map.loadImage(
@@ -457,7 +463,7 @@ export class MapBoxComponent {
       (error, image) => {
         if (error) throw error;
   
-        this.map.addImage(this.iconId, image!);
+        this.map.addImage(imaget, image!);
       }
     );});
   }

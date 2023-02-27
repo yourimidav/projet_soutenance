@@ -53,10 +53,14 @@
         </table>
     </div>
     <div><span>id: </span>{{ temperature.id }} </div>
-    <div>
-        <label for="temperature">Derniere température enregisrer: </label>
-        <input type="text" [(ngModel)]="temperature.temp" name="temperature" id="temperature">
+    <div class="form-style-9">
+        <label for="temperature" class="title1">Derniere température enregisrer: </label>
+        <ul><li>
+        <input type="text" [(ngModel)]="temperature.temp" name="temperature" id="temperature" class="field-style field-split align-left">
+    </li><li>
+        <button type="button" (click)="saveTemperature()" class="field-style field-split align-left">Update last temp</button>
+        <button type="button" (click)="goBack()" class="field-style field-split align-right">Go back</button>
+    </li>
+    </ul>
     </div>
 </div>
-<button type="button" (click)="saveTemperature()">Update last temp</button>
-<button type="button" (click)="goBack()">Go back</button>

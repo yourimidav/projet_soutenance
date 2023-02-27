@@ -1,10 +1,19 @@
 <div *ngIf="city">
     <h2> Weather in <span>{{ city.cityName | uppercase }}</span> {{ city.countryName }}</h2>
     <div><span>id: </span>{{ city.id }} </div>
-    <div>
-        <label for="cityName">City name: </label>
-        <input type="text" [(ngModel)]="city.cityName" name="cityName" id="cityName">
-        <button (click)="getWeather()">Show actual weather</button>
+    <div class="container form-style-9">
+      
+        <label for="cityName" class="title1">City name: </label>
+        <ul>
+          <li>
+            <input type="text" [(ngModel)]="city.cityName" name="cityName" id="cityName" class="field-style field-split align-left">
+           <button (click)="getWeather()" class="field-style field-split align-right">Show actual weather</button>
+        </li>
+        <li>
+          <button type="button" (click)="updaCity()" class="field-style field-split align-left">Upadate city name</button>
+          <button type="button" (click)="goBack()" class="field-style field-split align-right">Go back</button>
+         </li>
+      </ul>
     </div>
     <img *ngIf="icon"
         src="http://openweathermap.org/img/wn/{{ icon }}@4x.png"
@@ -17,8 +26,7 @@
         </p>
       </div>
 </div>
-<button type="button" (click)="updaCity()">Upadate city name</button>
-<button type="button" (click)="goBack()">Go back</button>
+
 <!--<button type="button" (click)="getAllTemperaureCity(city)">Show savedTemps</button>-->
 <h2>All Temperature saved for this city</h2>
 <div class="table-wrapper">

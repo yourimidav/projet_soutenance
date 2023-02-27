@@ -1,10 +1,14 @@
 <body><h2>Weather near you </h2>
 
-<p>
-  <label for="city">City: </label>
-  <input [(ngModel)]="city" type="text" name="city" id="city" />
-  <button (click)="getWeather()">New Request</button>
-</p>
+<div class="container form-style-9">
+  <label for="city" class="title1">City: </label>
+  <ul>
+    <li>
+       <input [(ngModel)]="city" type="text" name="city" id="city" class="field-style field-split align-left" />
+        <button (click)="getWeather()" class="field-style field-split align-right" >New Request</button>
+    </li>
+  </ul>
+</div>
 
 <img
   *ngIf="icon"
@@ -13,9 +17,8 @@
 />
 
 <div *ngIf="main">
-  <p>
-    {{ description }} avec une température de {{ main.temp }}°C pour un ressenti
-    de {{ main.feelsLike }}°C.
-  </p>
+  <div>
+    {{ description }} with a temperature of {{ main.temp }}°C and a feelsLike {{ main.feelsLike }}°C.
+  </div>
 </div>
 </body>

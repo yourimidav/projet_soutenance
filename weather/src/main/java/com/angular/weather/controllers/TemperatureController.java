@@ -62,7 +62,6 @@ public class TemperatureController {
     @PostMapping("/erature")
     public Temperature add(@RequestBody Temperature temperature) {
         System.out.println("Got a temperature");
-        System.out.println(temperature);
         WorldCity tempo = worldCityServ.getWorldCityByCityName(temperature.getVille().getCityName());
         if (tempo != null) temperature.setVille(tempo);
         return temperatureServiceInterface.addTemperature(temperature);

@@ -12,13 +12,13 @@ export class WeatherService {
 
   getWeatherFromCity(city: string): Observable<any> {
     return this.http.get(
-      `https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=fr&units=metric&appid=${this.API_KEY}`
+      `https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=en&units=metric&appid=${this.API_KEY}`
     );
   }
 
   getWeatherFromcoord(lat: number,lon:number): Observable<any> {
     return this.http.get(
-      `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&lang=fr&units=metric&appid=${this.API_KEY}`
+      `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&lang=en&units=metric&appid=${this.API_KEY}`
     );
   }
 
