@@ -55,7 +55,7 @@ public class Temperature {
 	@Column(name ="grnd_level")
 	private Long grndLevel;
 	
-	@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	@ManyToOne(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
 	@JoinColumn(name ="ville_id")
 	private WorldCity ville;
 

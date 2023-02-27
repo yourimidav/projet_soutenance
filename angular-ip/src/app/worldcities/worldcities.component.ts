@@ -74,7 +74,7 @@ export class WorldcitiesComponent {
       this.lati = data.coord.lat;
       this.isoName = data.sys.country;
       //temperature
-      this.dateReleve = data.dt;
+      this.dateReleve = ""+(data.dt * 1000);
       this.tempera = data.main.temp;
       this.ressenti = data.main.feels_like;
       this.temperaMin = data.main.temp_min;

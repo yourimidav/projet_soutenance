@@ -23,7 +23,7 @@ public class Marqueur {
     private String typegeo;// "Points"
     private double[] coordinates;
     
-    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @ManyToOne(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
     @JoinColumn(name ="ville_id")
     private WorldCity ville;
 

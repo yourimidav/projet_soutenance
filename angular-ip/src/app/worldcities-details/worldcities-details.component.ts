@@ -40,13 +40,17 @@ export class WorldcitiesDetailsComponent {
 
   ngOnInit(): void {
     this.getCity();
-    //this.getAllTemperaureCity();
+    //this.getAllTemperaureCity(this.city);
   }
 
   getCity(): void{
     const id: number = Number(this.route.snapshot.paramMap.get('id'));
-    this.worldCitiesService.getCityById(id).subscribe((city) => (this.city = city));
-    this.getAllTemperaureCity(this.city);
+    this.worldCitiesService.getCityById(id).subscribe({
+      next: (city) => (this.city = city),
+      complete: () => {this.getAllTemperaureCity(this.city)
+      this.getAllMarkerCity(this.city)}
+    });
+    
   }
 
   //Get all temperatures associated to selected city
@@ -71,7 +75,7 @@ export class WorldcitiesDetailsComponent {
 
   //Get all markers associated to selected city
   getAllMarkerCity(city: WorldCity): void{
-    this.markersService.getAllMarkersForCity(city).subscribe({
+    this.markersService.getAllMarkersForCityById(city.id!).subscribe({
       next: (markersFromObservable) => {
         this.marqueurs = markersFromObservable;
         console.log('Retrieved temperatures data :', markersFromObservable);
