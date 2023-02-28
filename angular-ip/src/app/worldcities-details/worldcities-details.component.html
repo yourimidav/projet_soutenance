@@ -90,7 +90,7 @@
           <th>Action</th>
       </tr>
     </thead>
-    <tbody *ngFor="let marker  of marqueurs | paginate: { itemsPerPage: 5, currentPage: p }">
+    <tbody *ngFor="let marker  of marqueurs | paginate: { itemsPerPage: 5, currentPage: p1 }">
       <tr>
         <td>
              <!--<a routerLink="/cityDetail/{{ city.id }}">
@@ -100,7 +100,9 @@
          </td>
          <td>{{ marker.type }}</td>
          <td>{{ marker.message }} </td>
-         <td>{{ marker.image }} </td>
+         <td> <img src="https://weather-icons.cleverapps.io/weather/icons/{{ marker.image  }}.png"/></td>
+         <!--<td>{{ marker.image }} </td>
+         <td><img src="`https://weather-icons.cleverapps.io/weather/icons/"{{ marker.image }}\"".png"></td>-->
          <td>{{ marker.typegeo }}</td>
          <td>{{ marker.coordinates }}</td>
          <td>
@@ -115,5 +117,5 @@
     </tbody>
   </table>
 </div>
-<pagination-controls (pageChange)="p = $event" class="float-right"></pagination-controls>
+<pagination-controls (pageChange)="p1 = $event" class="float-right"></pagination-controls>
 

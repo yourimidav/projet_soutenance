@@ -719,6 +719,726 @@
         ]
       },
       "id": 48
+    },
+    {
+      "properties": {
+        "message": "Bonjour Florence-Graham\nweather : overcast clouds\n and it is : 10.5 °C",
+        "image": "04d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.28284739843852,
+          33.99606005918589
+        ]
+      },
+      "id": 49
+    },
+    {
+      "properties": {
+        "message": "Bonjour Wyldwood\nweather : scattered clouds\n and it is : 24.68 °C",
+        "image": "03d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.46937400335315,
+          29.963685743557875
+        ]
+      },
+      "id": 50
+    },
+    {
+      "properties": {
+        "message": "Bonjour Russell\nweather : clear sky\n and it is : 15.71 °C",
+        "image": "01d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -98.62286973347955,
+          39.11575885529794
+        ]
+      },
+      "id": 51
+    },
+    {
+      "properties": {
+        "message": "Bonjour Roundup\nweather : few clouds\n and it is : 1.48 °C",
+        "image": "02d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -108.67206305752049,
+          46.53940975699987
+        ]
+      },
+      "id": 52
+    },
+    {
+      "properties": {
+        "message": "Bonjour Owyhee\nweather : overcast clouds\n and it is : -4.19 °C",
+        "image": "04d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -116.0286306905472,
+          42.345546331976294
+        ]
+      },
+      "id": 53
+    },
+    {
+      "properties": {
+        "message": "Bonjour Amboy\nweather : overcast clouds\n and it is : 11.05 °C",
+        "image": "04d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.2133356337709,
+          41.64377968946448
+        ]
+      },
+      "id": 54
+    },
+    {
+      "properties": {
+        "message": "Bonjour Due West\nweather : scattered clouds\n and it is : 20.83 °C",
+        "image": "03d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.4964954360556,
+          34.347408123191926
+        ]
+      },
+      "id": 55
+    },
+    {
+      "properties": {
+        "message": "Bonjour Jarales\nweather : clear sky\n and it is : 5.66 °C",
+        "image": "01d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -106.81134953824142,
+          34.562915293148606
+        ]
+      },
+      "id": 56
+    },
+    {
+      "properties": {
+        "message": "Bonjour Santa Catarina de Tepehuanes\nweather : clear sky\n and it is : 18.72 °C",
+        "image": "01d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -105.87742916854918,
+          25.176584908099997
+        ]
+      },
+      "id": 57
+    },
+    {
+      "properties": {
+        "message": "Bonjour Deep Cove\nweather : light rain\n and it is : -1.21 °C",
+        "image": "10d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.9787781591726,
+          49.36529990765962
+        ]
+      },
+      "id": 58
+    },
+    {
+      "properties": {
+        "message": "Bonjour Forest Lawn Industrial\nweather : scattered clouds\n and it is : -7.92 °C",
+        "image": "03d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -113.93265935290711,
+          51.01678015179934
+        ]
+      },
+      "id": 59
+    },
+    {
+      "properties": {
+        "message": "Bonjour Fort McMurray\nweather : overcast clouds\n and it is : -12.39 °C",
+        "image": "04d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.64739916042092,
+          56.80899033479059
+        ]
+      },
+      "id": 60
+    },
+    {
+      "properties": {
+        "message": "Bonjour Reaburn\nweather : overcast clouds\n and it is : -4.61 °C",
+        "image": "04d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.7295454434227,
+          50.06956855599887
+        ]
+      },
+      "id": 61
+    },
+    {
+      "properties": {
+        "message": "Bonjour Dryden\nweather : overcast clouds\n and it is : -4.88 °C",
+        "image": "04d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -92.8100939260909,
+          49.946947224215364
+        ]
+      },
+      "id": 62
+    },
+    {
+      "properties": {
+        "message": "Bonjour Ntui\nweather : broken clouds\n and it is : 24.22 °C",
+        "image": "04n"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.590306396760724,
+          4.402963869015906
+        ]
+      },
+      "id": 63
+    },
+    {
+      "properties": {
+        "message": "Bonjour Bamako Region\nweather : scattered clouds\n and it is : 29.77 °C",
+        "image": "03n"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.012536252965475,
+          12.70186595712002
+        ]
+      },
+      "id": 64
+    },
+    {
+      "properties": {
+        "message": "Bonjour \nweather : scattered clouds\n and it is : 26.75 °C",
+        "image": "03d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -132.49269987605967,
+          -11.658913266353522
+        ]
+      },
+      "id": 65
+    },
+    {
+      "properties": {
+        "message": "Bonjour Saint-Mandé\nweather : clear sky\n and it is : 2.02 °C",
+        "image": "01n"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.394822169120488,
+          48.84827140665462
+        ]
+      },
+      "id": 66
+    },
+    {
+      "properties": {
+        "message": "Bonjour Arrondissement de Tours\nweather : clear sky\n and it is : 1.59 °C",
+        "image": "01n"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.6878102442164504,
+          47.42222845450203
+        ]
+      },
+      "id": 67
+    },
+    {
+      "properties": {
+        "message": "Bonjour Rezé\nweather : clear sky\n and it is : 1.81 °C",
+        "image": "01n"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.5576634465327288,
+          47.19338987910129
+        ]
+      },
+      "id": 68
+    },
+    {
+      "properties": {
+        "message": "Bonjour Cholet\nweather : clear sky\n and it is : 1.2 °C",
+        "image": "01n"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.8699559359034197,
+          47.057544307692666
+        ]
+      },
+      "id": 69
+    },
+    {
+      "properties": {
+        "message": "Bonjour Panazol\nweather : clear sky\n and it is : 0.83 °C",
+        "image": "01n"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.3040876514705246,
+          45.83991881606798
+        ]
+      },
+      "id": 70
+    },
+    {
+      "properties": {
+        "message": "Bonjour Gioia Sannitica\nweather : overcast clouds\n and it is : 1.51 °C",
+        "image": "04n"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.45226454251329,
+          41.33853172163401
+        ]
+      },
+      "id": 71
+    },
+    {
+      "properties": {
+        "message": "Bonjour El Hadjira\nweather : clear sky\n and it is : 14.23 °C",
+        "image": "01n"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.402931018253554,
+          32.29175340209197
+        ]
+      },
+      "id": 72
+    },
+    {
+      "properties": {
+        "message": "Bonjour Sidi Rahhal\nweather : clear sky\n and it is : 9.52 °C",
+        "image": "01n"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.544022746441357,
+          31.919163082397716
+        ]
+      },
+      "id": 73
+    },
+    {
+      "properties": {
+        "message": "Bonjour Mandra-Eidyllia\nweather : few clouds\n and it is : 11.98 °C",
+        "image": "02n"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          23.351830348644626,
+          38.11927163882774
+        ]
+      },
+      "id": 74
+    },
+    {
+      "properties": {
+        "message": "Bonjour Yenifakılı\nweather : overcast clouds\n and it is : 6.46 °C",
+        "image": "04n"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.08308997740332,
+          39.092706747999415
+        ]
+      },
+      "id": 75
+    },
+    {
+      "properties": {
+        "message": "Bonjour Helwan\nweather : clear sky\n and it is : 16.29 °C",
+        "image": "01n"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.217737318490208,
+          29.790929842241226
+        ]
+      },
+      "id": 76
+    },
+    {
+      "properties": {
+        "message": "Bonjour \nweather : clear sky\n and it is : 16.35 °C",
+        "image": "01n"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.239599166146917,
+          22.99243489354275
+        ]
+      },
+      "id": 77
+    },
+    {
+      "properties": {
+        "message": "Bonjour Zinder\nweather : clear sky\n and it is : 26.05 °C",
+        "image": "01n"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.041570308045095,
+          13.906086723021403
+        ]
+      },
+      "id": 78
+    },
+    {
+      "properties": {
+        "message": "Bonjour Maracaibo\nweather : clear sky\n and it is : 26.87 °C",
+        "image": "01d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.45649368743699,
+          10.791910056002664
+        ]
+      },
+      "id": 79
+    },
+    {
+      "properties": {
+        "message": "Bonjour Maripa\nweather : scattered clouds\n and it is : 30.45 °C",
+        "image": "03n"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -65.17826417809266,
+          7.416644550149286
+        ]
+      },
+      "id": 80
+    },
+    {
+      "properties": {
+        "message": "Bonjour Departamento de Yoro\nweather : scattered clouds\n and it is : 30.88 °C",
+        "image": "03d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.18598157412492,
+          15.268269086336417
+        ]
+      },
+      "id": 81
+    },
+    {
+      "properties": {
+        "message": "Bonjour General Bravo\nweather : broken clouds\n and it is : 33.24 °C",
+        "image": "04d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -99.13189005109099,
+          25.81012625905589
+        ]
+      },
+      "id": 82
+    },
+    {
+      "properties": {
+        "message": "Bonjour Namiquipa\nweather : clear sky\n and it is : 19.19 °C",
+        "image": "01d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -107.07331901746069,
+          28.929303858752007
+        ]
+      },
+      "id": 83
+    },
+    {
+      "properties": {
+        "message": "Bonjour Villa Guerrero\nweather : clear sky\n and it is : 31.5 °C",
+        "image": "01d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -104.27049616662732,
+          21.973749489573393
+        ]
+      },
+      "id": 84
+    },
+    {
+      "properties": {
+        "message": "Bonjour Arlington\nweather : clear sky\n and it is : 24.08 °C",
+        "image": "01d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.10348476664761,
+          32.743464920470416
+        ]
+      },
+      "id": 85
+    },
+    {
+      "properties": {
+        "message": "Bonjour Prospect\nweather : broken clouds\n and it is : 21.07 °C",
+        "image": "04d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -85.68242416199112,
+          38.3630654427279
+        ]
+      },
+      "id": 86
+    },
+    {
+      "properties": {
+        "message": "Bonjour Champigneulles\nweather : clear sky\n and it is : -0.93 °C",
+        "image": "01n"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.178028831930021,
+          48.738308066381876
+        ]
+      },
+      "id": 87
+    },
+    {
+      "properties": {
+        "message": "Bonjour Écuelles\nweather : clear sky\n and it is : 0.32 °C",
+        "image": "01n"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.8110497673652617,
+          48.31415085551737
+        ]
+      },
+      "id": 88
+    },
+    {
+      "properties": {
+        "message": "Bonjour Aulnay-sous-Bois\nweather : clear sky\n and it is : 1.81 °C",
+        "image": "01n"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.4932983394807593,
+          48.95402677222563
+        ]
+      },
+      "id": 89
+    },
+    {
+      "properties": {
+        "message": "Bonjour Saint-Denis\nweather : clear sky\n and it is : 2.14 °C",
+        "image": "01n"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.35343063191209,
+          48.944549682932006
+        ]
+      },
+      "id": 90
+    },
+    {
+      "properties": {
+        "message": "Bonjour Nanterre\nweather : clear sky\n and it is : 2.19 °C",
+        "image": "01n"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.199134921535915,
+          48.88691832447054
+        ]
+      },
+      "id": 91
+    },
+    {
+      "properties": {
+        "message": "Bonjour Colombes\nweather : clear sky\n and it is : 2.2 °C",
+        "image": "01n"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2539105144422535,
+          48.92295497643303
+        ]
+      },
+      "id": 92
+    },
+    {
+      "properties": {
+        "message": "Bonjour Argenteuil\nweather : clear sky\n and it is : 2.08 °C",
+        "image": "01n"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.243757071801525,
+          48.947463049446924
+        ]
+      },
+      "id": 93
+    },
+    {
+      "properties": {
+        "message": "Bonjour Nerima\nweather : clear sky\n and it is : 6.43 °C",
+        "image": "01d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.64936511752535,
+          35.73364876091868
+        ]
+      },
+      "id": 94
+    },
+    {
+      "properties": {
+        "message": "Bonjour Minamisenju\nweather : clear sky\n and it is : 6.98 °C",
+        "image": "01d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.8022484272928,
+          35.773466756115994
+        ]
+      },
+      "id": 95
+    },
+    {
+      "properties": {
+        "message": "Bonjour Takajōmachi\nweather : clear sky\n and it is : 10.61 °C",
+        "image": "01d"
+      },
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.38300540384648,
+          34.97302467862059
+        ]
+      },
+      "id": 96
     }
   ]
 }

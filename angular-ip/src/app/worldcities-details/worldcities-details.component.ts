@@ -28,6 +28,7 @@ export class WorldcitiesDetailsComponent {
 
   //for manage page
   p: number = 1;
+  p1: number = 1;
 
   constructor(
     private route: ActivatedRoute,

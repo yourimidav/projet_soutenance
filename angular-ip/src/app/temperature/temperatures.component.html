@@ -1,9 +1,9 @@
 <div class="container" id="formulaireAjoutTemp">
       <h1 class="title1">Add new Temperature manually</h1>
-      <form [formGroup]="formulaireTemperature" (ngSubmit)="getCityCoord()" class="form-style-9">
+      <form [formGroup]="formulaireTemperature" (ngSubmit)="onSubmit()" class="form-style-9">
         <ul>
           <li>
-            <input class="field-style field-split align-left" id="city-name" type="text" formControlName="ville" placeholder="City name: Exemple Paris">
+            <input class="field-style field-split align-left" id="city-name" type="text" formControlName="villeForm" placeholder="City name: Exemple Paris">
             <input class="field-style field-split align-right" id="tempForm" type="number" formControlName="tempForm" placeholder="Temperature (in °C): Exemple: 12">
           </li>
           <li>
@@ -20,7 +20,10 @@
           </li>
           <li>
             <input class="field-style field-split align-left" id="dateReleve" type="datetime-local" formControlName="dateReleve" placeholder="Date Releve">
-            <input class="field-style field-split align-right" type="submit" class="submit" value="Submit">
+            <input class="field-style field-split align-right" id="feelsLike" type="feelsLike"  formControlName="feelsLikeForm" placeholder="Feel like: Exemple 9">
+          </li>
+          <li>
+            <input class="field-style field-split align-left" type="submit" class="submit" value="Submit">
           </li>
         </ul>
       </form >
